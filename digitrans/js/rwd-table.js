@@ -117,7 +117,7 @@
         i18n: {
             focus     : 'Focus',
             display   : 'Filter',
-            displayAll: 'Toon alles'
+            displayAll: 'Toon alle fracties'
         }
     };
 
