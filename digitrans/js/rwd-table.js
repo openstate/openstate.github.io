@@ -116,7 +116,7 @@
         mainContainer: window,
         i18n: {
             focus     : 'Focus',
-            display   : 'Filter',
+            display   : 'Vergelijk fracties',
             displayAll: 'Toon alle fracties'
         }
     };
