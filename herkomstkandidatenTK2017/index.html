@@ -6,55 +6,92 @@
 <meta name="description" content="">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
-<!--BOOTSTRAP -->
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
+  
+<style>
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+</style>
 
 <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#"></a></li>
-    <li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/vvd.html">VVD</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/pvda.html">Partij van de Arbeid (P.v.d.A.)</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/pvv.html">PVV (Partij voor de Vrijheid)</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/sp.html">SP (Socialistische Partij)</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/cda.html">CDA</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/d66.html">Democraten 66 (D66)</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/cu.html">ChristenUnie</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/gl.html">GROENLINKS</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/sgp.html">Staatkundig Gereformeerde Partij (SGP)</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/pvvd.html">Partij voor de Dieren</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/50plus.html">50PLUS</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/op.html">OndernemersPartij</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/vnl.html">VNL (VoorNederland)</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/denk.html">DENK</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/nw.html">NIEUWE WEGEN</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/fvd.html">Forum voor Democratie</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/bb.html">De Burger Beweging</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/vzp.html">Vrijzinnige Partij</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/gp.html">GeenPeil</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/pp.html">Piratenpartij</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/art1.html">Artikel 1</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/ns.html">Niet Stemmers</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/lp.html">Libertarische Partij (LP)</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/lokaal.html">Lokaal in de Kamer</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/jezus.html">JEZUS LEEFT</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/stemnl.html">StemNL</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/mens.html">MenS en Spirit/Basisinkomen Partij/V-R</a></li>
-<li><a href="https://openstate.github.io/herkomstkandidatenTK2017/data/vdp.html">Vrije Democratische Partij (VDP)</a></li>
-</ul>
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+   <a href="https://openstate.github.io/herkomstkandidatenTK2017/data/vvd.html">VVD</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/pvda.html">Partij van de Arbeid (P.v.d.A.)</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/pvv.html">PVV (Partij voor de Vrijheid)</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/sp.html">SP (Socialistische Partij)</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/cda.html">CDA</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/d66.html">Democraten 66 (D66)</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/cu.html">ChristenUnie</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/gl.html">GROENLINKS</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/sgp.html">Staatkundig Gereformeerde Partij (SGP)</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/pvvd.html">Partij voor de Dieren</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/50plus.html">50PLUS</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/op.html">OndernemersPartij</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/vnl.html">VNL (VoorNederland)</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/denk.html">DENK</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/nw.html">NIEUWE WEGEN</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/fvd.html">Forum voor Democratie</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/bb.html">De Burger Beweging</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/vzp.html">Vrijzinnige Partij</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/gp.html">GeenPeil</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/pp.html">Piratenpartij</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/art1.html">Artikel 1</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/ns.html">Niet Stemmers</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/lp.html">Libertarische Partij (LP)</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/lokaal.html">Lokaal in de Kamer</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/jezus.html">JEZUS LEEFT</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/stemnl.html">StemNL</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/mens.html">MenS en Spirit/Basisinkomen Partij/V-R</a>
+<a href="https://openstate.github.io/herkomstkandidatenTK2017/data/vdp.html">Vrije Democratische Partij (VDP)</a>
+  
+  
+  </div>
 </div>
   
 </body>
