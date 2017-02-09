@@ -30,15 +30,19 @@
 </head>
 
 <body>
+    
+<canvas id="myChart" width="400" height="400"></canvas>
 <script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'doughnut',
+
+        
+        <script>
 // And for a doughnut chart
 var myDoughnutChart = new Chart(ctx, {
     type: 'doughnut',
-    data: data,
-    options: options
-});
-
-var data = {
+    data: {
     labels: [
         "Red",
         "Blue",
@@ -61,7 +65,6 @@ var data = {
 };
     </script>
     
-    <canvas id="myDoughnutChart" width="400" height="400"></canvas>
 
 
 </body>
