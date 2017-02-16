@@ -52,6 +52,15 @@
 $(document).ready(function() {
     $('#example').DataTable( {
 	    
+	    
+	language: {
+            "lengthMenu": "Display _MENU_ records per page",
+            "zeroRecords": "Nothing found - sorry",
+            "info": "BLABLA",
+            "infoEmpty": "No records available",
+            "infoFiltered": "(filtered from _MAX_ total records)"
+        },
+	    
         responsive: {
             details: {
                 type: 'column',
@@ -65,6 +74,7 @@ $(document).ready(function() {
         } ],
         order: [ 3, 'asc' ]
     } );	 
+	
     } );
 </script>
 	
