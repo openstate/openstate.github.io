@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Stem op een vrouw: Hoe is het met de balans gesteld?</title>
+    <title>stem op een vrouw</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Open State Foundation">
@@ -19,6 +19,9 @@
  <!--JS LIBRARIES-->
     <!--JQUERY-->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
 
     <!--BOOTSTRAP JS-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -32,6 +35,11 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.0/css/buttons.bootstrap.min.css">
+
+<!-- Datatables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css">
+
 
 </head>
 
@@ -54,17 +62,10 @@
           <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="https://openstate.github.io/stemopeenvrouw">Home</a></li>
-            
-              <li><button class="dropdown-toggle" type="button" data-toggle="dropdown">Opties
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-  	<li> <a class="dropdown-item" href="#">Laatste peiling</a></li>
-   	<li> <a class="dropdown-item" href="#perpartij">Trend vrouwenzetels per partij</a></li>
-    <li><a class="dropdown-item" href="#kandidaat">Zoek een kandidaat</a></li>
-    <li><a class="dropdown-item" href="#trend">Balans trend</a></li>
-   </ul></li>
-    <li><a href="#contact">Contact</a></li>
-</ul>
+              <li><a href="#trend">Trends</a></li>
+              <li><a href="#kandidaat">Zoek een kandidaat</a></li>
+              <li><a href="#contact">Contact</a></li>
+			</ul>
           </div>
         </div>
       </nav>
@@ -100,31 +101,470 @@
 <iframe id="datawrapper-chart-6q7im" src="//datawrapper.dwcdn.net/6q7im/1/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="100%" height="394"></iframe><script type="text/javascript">if("undefined"==typeof window.datawrapper)window.datawrapper={};window.datawrapper["6q7im"]={},window.datawrapper["6q7im"].embedDeltas={"100":394,"200":394,"300":394,"400":394,"500":394,"600":394,"700":394,"800":394,"900":394,"1000":394},window.datawrapper["6q7im"].iframe=document.getElementById("datawrapper-chart-6q7im"),window.datawrapper["6q7im"].iframe.style.height=window.datawrapper["6q7im"].embedDeltas[Math.min(1e3,Math.max(100*Math.floor(window.datawrapper["6q7im"].iframe.offsetWidth/100),100))]+"px",window.addEventListener("message",function(a){if("undefined"!=typeof a.data["datawrapper-height"])for(var b in a.data["datawrapper-height"])if("6q7im"==b)window.datawrapper["6q7im"].iframe.style.height=a.data["datawrapper-height"][b]+"px"});</script>
 <p><strong>4 februari 2017: 36,6% - 55 vrouwenzetels</strong></p>
 <iframe id="datawrapper-chart-ByFOD" src="//datawrapper.dwcdn.net/ByFOD/1/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="100%" height="394"></iframe><script type="text/javascript">if("undefined"==typeof window.datawrapper)window.datawrapper={};window.datawrapper["ByFOD"]={},window.datawrapper["ByFOD"].embedDeltas={"100":394,"200":394,"300":394,"400":394,"500":394,"600":394,"700":394,"800":394,"900":394,"1000":394},window.datawrapper["ByFOD"].iframe=document.getElementById("datawrapper-chart-ByFOD"),window.datawrapper["ByFOD"].iframe.style.height=window.datawrapper["ByFOD"].embedDeltas[Math.min(1e3,Math.max(100*Math.floor(window.datawrapper["ByFOD"].iframe.offsetWidth/100),100))]+"px",window.addEventListener("message",function(a){if("undefined"!=typeof a.data["datawrapper-height"])for(var b in a.data["datawrapper-height"])if("ByFOD"==b)window.datawrapper["ByFOD"].iframe.style.height=a.data["datawrapper-height"][b]+"px"});</script>
-<section id="perpartij">
+
+<section id="trend">
 <p></p><br><hr></br><p></p>
 
 <p>Aantal vrouwenzetels per partij op basis van de kandidatenlijsten en aantal zetels in peilingwijzer</p>
 <strong>september 2016 - februari 2017</strong>
 <iframe id="datawrapper-chart-xE2If" src="//datawrapper.dwcdn.net/xE2If/6/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="100%" height="450"></iframe><script type="text/javascript">if("undefined"==typeof window.datawrapper)window.datawrapper={};window.datawrapper["xE2If"]={},window.datawrapper["xE2If"].embedDeltas={"100":450,"200":450,"300":450,"400":450,"500":450,"600":450,"700":450,"800":450,"900":450,"1000":450},window.datawrapper["xE2If"].iframe=document.getElementById("datawrapper-chart-xE2If"),window.datawrapper["xE2If"].iframe.style.height=window.datawrapper["xE2If"].embedDeltas[Math.min(1e3,Math.max(100*Math.floor(window.datawrapper["xE2If"].iframe.offsetWidth/100),100))]+"px",window.addEventListener("message",function(a){if("undefined"!=typeof a.data["datawrapper-height"])for(var b in a.data["datawrapper-height"])if("xE2If"==b)window.datawrapper["xE2If"].iframe.style.height=a.data["datawrapper-height"][b]+"px"});</script>
-</section><section id="kandidaat">
- <p></p><br><hr></br><p></p>
-
-<iframe id="datawrapper-chart-kxk25" src="//datawrapper.dwcdn.net/kxk25/1/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="100%" height="529"></iframe><script type="text/javascript">if("undefined"==typeof window.datawrapper)window.datawrapper={};window.datawrapper["kxk25"]={},window.datawrapper["kxk25"].embedDeltas={"100":529,"200":529,"300":529,"400":529,"500":529,"600":529,"700":529,"800":529,"900":529,"1000":529},window.datawrapper["kxk25"].iframe=document.getElementById("datawrapper-chart-kxk25"),window.datawrapper["kxk25"].iframe.style.height=window.datawrapper["kxk25"].embedDeltas[Math.min(1e3,Math.max(100*Math.floor(window.datawrapper["kxk25"].iframe.offsetWidth/100),100))]+"px",window.addEventListener("message",function(a){if("undefined"!=typeof a.data["datawrapper-height"])for(var b in a.data["datawrapper-height"])if("kxk25"==b)window.datawrapper["kxk25"].iframe.style.height=a.data["datawrapper-height"][b]+"px"});</script>
-</section><section id="trend">
-<p></p><br><hr></br><p></p>
-
-<p>Percentage vrouwenzetels dat op basis van de kandidatenlijsten en aantal zetels in peilingwijzer in de Tweede Kamer zou komen</p>
-<strong>september 2016 - februari 2017</strong>
-<iframe id="datawrapper-chart-vf173" src="//datawrapper.dwcdn.net/vf173/5/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="100%" height="400"></iframe><script type="text/javascript">if("undefined"==typeof window.datawrapper)window.datawrapper={};window.datawrapper["vf173"]={},window.datawrapper["vf173"].embedDeltas={"100":400,"200":400,"300":400,"400":400,"500":400,"600":400,"700":400,"800":400,"900":400,"1000":400},window.datawrapper["vf173"].iframe=document.getElementById("datawrapper-chart-vf173"),window.datawrapper["vf173"].iframe.style.height=window.datawrapper["vf173"].embedDeltas[Math.min(1e3,Math.max(100*Math.floor(window.datawrapper["vf173"].iframe.offsetWidth/100),100))]+"px",window.addEventListener("message",function(a){if("undefined"!=typeof a.data["datawrapper-height"])for(var b in a.data["datawrapper-height"])if("vf173"==b)window.datawrapper["vf173"].iframe.style.height=a.data["datawrapper-height"][b]+"px"});</script>
-</div></section>
 <div class="container">
 <div class="panel panel-default">
   <div class="panel-body">
     Voor totaal aan zetels in peilingen hebben we gebruik gemaakt van data van <a href="http://peilingwijzer.tomlouwerse.nl/" target="_blank">Peilingwijzer</a> van Tom Louwerse, Universiteit Leiden. Peilingwijzer combineert de peilingen van I&O Research, Ipsos, Kantar Public, Peil.nl en De Stemming/EenVandaag tot één schatting van de politieke krachtsverhoudingen voor de Tweede Kamer. Daarnaast hebben we data gebruikt die we hebben onttrokken uit het proces verbaal geldigheid kandidatenlijsten van de Kiesraad.
   </div>
 </div>
+<section id="kandidaat">
+<p></p><br><hr></br><p></p>
 </div>
 
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $('#example').DataTable( {
+        responsive: {
+            details: {
+                type: 'column',
+                target: 'tr'
+            }
+        },
+        columnDefs: [ {
+            className: 'control',
+            orderable: false,
+            targets:   0
+        } ],
+        order: [ 1, 'asc' ]
+    } );
+} );
+
+</script>
+
+
+<table id="example" class="display nowrap" cellspacing="0" width="100%">
+
+<thead>
+            <tr>
+                <th></th>
+                <th>Naam</th>
+                <th>Partij</th>
+                <th>Plek</th>
+                <th>Woonplaats</th>
+                <th>Kies kringen</th>
+            </tr>
+        </thead>
+   <tfoot>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+	</tfoot>
+<tbody>
+
+<tr><td></td><td>Ancilla van de Leest</td><td>Piratenpartij</td><td>1</td><td>Amsterdam</td><td>19</td></tr>
+<tr><td></td><td>Marianne Thieme</td><td>Partij voor de Dieren</td><td>1</td><td>Maarssen</td><td>20</td></tr>
+<tr><td></td><td>Sylvana Simons</td><td>Artikel 1</td><td>1</td><td>Ouder-Amstel</td><td>18</td></tr>
+<tr><td></td><td>Tara-Joëlle Fonk</td><td>MenS en Spirit / Basisinkomen Partij / V-R</td><td>1</td><td>Zwolle</td><td>2</td></tr>
+<tr><td></td><td>Beryl Dreijer</td><td>GeenPeil</td><td>2</td><td>Santpoort-Noord</td><td>19</td></tr>
+<tr><td></td><td>Carola Schouten</td><td>ChristenUnie</td><td>2</td><td>Rotterdam</td><td>20</td></tr>
+<tr><td></td><td>Esther Ouwehand</td><td>Partij voor de Dieren</td><td>2</td><td>Leiden</td><td>20</td></tr>
+<tr><td></td><td>Fatima Faïd</td><td>Artikel 1</td><td>2</td><td>s-Gravenhage</td><td>18</td></tr>
+<tr><td></td><td>Fleur Agema</td><td>PVV (Partij voor de Vrijheid)</td><td>2</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Jeanine Hennis-Plasschaert</td><td>VVD</td><td>2</td><td>Nederhorst den Berg</td><td>20</td></tr>
+<tr><td></td><td>Kathalijne Buitenweg</td><td>GROENLINKS</td><td>2</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Khadija Arib</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>2</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Léonie Sazias</td><td>50PLUS</td><td>2</td><td>Hilversum</td><td>20</td></tr>
+<tr><td></td><td>Marie-Louise Loomans</td><td>Vrijzinnige Partij</td><td>2</td><td>Soest</td><td>19</td></tr>
+<tr><td></td><td>Martine Gaasbeek</td><td>OndernemersPartij</td><td>2</td><td>Varsseveld</td><td>20</td></tr>
+<tr><td></td><td>Mona Keijzer</td><td>CDA</td><td>2</td><td>Edam-Volendam</td><td>20</td></tr>
+<tr><td></td><td>Renske Leijten</td><td>SP (Socialistische Partij)</td><td>2</td><td>Haarlem</td><td>20</td></tr>
+<tr><td></td><td>Stientje van Veldhoven</td><td>Democraten 66 (D66)</td><td>2</td><td>Rijswijk</td><td>20</td></tr>
+<tr><td></td><td>Sylvie Jacobs</td><td>MenS en Spirit / Basisinkomen Partij / V-R</td><td>2</td><td>Kamerik</td><td>2</td></tr>
+<tr><td></td><td>Brigitte Sins</td><td>Artikel 1</td><td>3</td><td>Amsterdam</td><td>18</td></tr>
+<tr><td></td><td>Lillian Marijnissen</td><td>SP (Socialistische Partij)</td><td>3</td><td>Oss</td><td>20</td></tr>
+<tr><td></td><td>Ramona Beemsterboer</td><td>NIEUWE WEGEN</td><td>3</td><td>Blaricum</td><td>20</td></tr>
+<tr><td></td><td>Susan Teunissen</td><td>Forum voor Democratie</td><td>3</td><td>Utrecht</td><td>20</td></tr>
+<tr><td></td><td>Vicky Maeijer</td><td>PVV (Partij voor de Vrijheid)</td><td>3</td><td>Krimpen aan den IJssel</td><td>20</td></tr>
+<tr><td></td><td>Yvonne Brinkerink</td><td>MenS en Spirit / Basisinkomen Partij / V-R</td><td>3</td><td>Ede</td><td>2</td></tr>
+<tr><td></td><td>Anita van der Linde</td><td>De Burger Beweging</td><td>4</td><td>Meppel</td><td>19</td></tr>
+<tr><td></td><td>Artemis Westenberg</td><td>Vrijzinnige Partij</td><td>4</td><td>Capelle aan den IJssel</td><td>19</td></tr>
+<tr><td></td><td>Carla Dik-Faber</td><td>ChristenUnie</td><td>4</td><td>Veenendaal</td><td>20</td></tr>
+<tr><td></td><td>Corrie van Brenk</td><td>50PLUS</td><td>4</td><td>Utrecht</td><td>20</td></tr>
+<tr><td></td><td>Gladys Albitrouw</td><td>DENK</td><td>4</td><td>Rotterdam</td><td>20</td></tr>
+<tr><td></td><td>Linda Voortman</td><td>GROENLINKS</td><td>4</td><td>Utrecht</td><td>20</td></tr>
+<tr><td></td><td>Petra Busio</td><td>MenS en Spirit / Basisinkomen Partij / V-R</td><td>4</td><td>Oosterhout</td><td>1</td></tr>
+<tr><td></td><td>Pia Dijkstra</td><td>Democraten 66 (D66)</td><td>4</td><td>Utrecht</td><td>20</td></tr>
+<tr><td></td><td>Sharon Dijksma</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>4</td><td>Enschede</td><td>20</td></tr>
+<tr><td></td><td>Simone Pailer</td><td>Libertarische Partij (LP)</td><td>4</td><td>s-Gravenhage</td><td>16</td></tr>
+<tr><td></td><td>Tamara van Ark</td><td>VVD</td><td>4</td><td>Nieuwerkerk aan den IJssel</td><td>20</td></tr>
+<tr><td></td><td>Tanya Hoogwerf</td><td>VNL (VoorNederland)</td><td>4</td><td>Rotterdam</td><td>20</td></tr>
+<tr><td></td><td>Anke Siegers</td><td>De Burger Beweging</td><td>5</td><td>Willemsoord</td><td>19</td></tr>
+<tr><td></td><td>Chantal Klaver</td><td>GeenPeil</td><td>5</td><td>s-Gravenhage</td><td>19</td></tr>
+<tr><td></td><td>Denise Kunst-van Suijlekom</td><td>Lokaal in de Kamer</td><td>5</td><td>s Gravenmoer</td><td>15</td></tr>
+<tr><td></td><td>Femke Merel Arissen</td><td>Partij voor de Dieren</td><td>5</td><td>Huis ter Heide</td><td>20</td></tr>
+<tr><td></td><td>Ingrid van Engelshoven</td><td>Democraten 66 (D66)</td><td>5</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Madeleine van Toorenburg</td><td>CDA</td><td>5</td><td>Rosmalen</td><td>20</td></tr>
+<tr><td></td><td>Nihad El Farougui</td><td>Niet Stemmers</td><td>5</td><td>Amsterdam</td><td>16</td></tr>
+<tr><td></td><td>Petra Downs-Hovestadt</td><td>Piratenpartij</td><td>5</td><td>Helmond</td><td>19</td></tr>
+<tr><td></td><td>Sadet Karabulut</td><td>SP (Socialistische Partij)</td><td>5</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Annette Mul</td><td>De Burger Beweging</td><td>6</td><td>Eindhoven</td><td>19</td></tr>
+<tr><td></td><td>Attje Kuiken</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>6</td><td>Breda</td><td>20</td></tr>
+<tr><td></td><td>Eva van Esch</td><td>Partij voor de Dieren</td><td>6</td><td>Utrecht</td><td>20</td></tr>
+<tr><td></td><td>Liesbeth van Tongeren</td><td>GROENLINKS</td><td>6</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Magdalena Charlot</td><td>DENK</td><td>6</td><td>Lelystad</td><td>20</td></tr>
+<tr><td></td><td>Mariëtta de Koning</td><td>OndernemersPartij</td><td>6</td><td>Edam-Volendam</td><td>20</td></tr>
+<tr><td></td><td>Sandra Beckerman</td><td>SP (Socialistische Partij)</td><td>6</td><td>Groningen</td><td>20</td></tr>
+<tr><td></td><td>Stieneke van der Graaf</td><td>ChristenUnie</td><td>6</td><td>Groningen</td><td>20</td></tr>
+<tr><td></td><td>Vera Bergkamp</td><td>Democraten 66 (D66)</td><td>6</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Wendy Vianen-van der Geest</td><td>NIEUWE WEGEN</td><td>6</td><td>Monster</td><td>20</td></tr>
+<tr><td></td><td>Barbara Visser</td><td>VVD</td><td>7</td><td>Zaanstad</td><td>20</td></tr>
+<tr><td></td><td>Christine Teunissen</td><td>Partij voor de Dieren</td><td>7</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Corinne de Jonge van Ellemeet</td><td>GROENLINKS</td><td>7</td><td>Abcoude</td><td>20</td></tr>
+<tr><td></td><td>Joyce van Herp</td><td>StemNL</td><td>7</td><td>Dordrecht</td><td>9</td></tr>
+<tr><td></td><td>Maribel Schwab</td><td>Niet Stemmers</td><td>7</td><td>Amsterdam</td><td>16</td></tr>
+<tr><td></td><td>Phyllis Döll-Osei Ameyaw</td><td>Artikel 1</td><td>7</td><td>Amsterdam</td><td>18</td></tr>
+<tr><td></td><td>Susan Stolze - van Rijn</td><td>Forum voor Democratie</td><td>7</td><td>Rotterdam</td><td>20</td></tr>
+<tr><td></td><td>Ayşegül Kiliç</td><td>DENK</td><td>8</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Floriske van Leeuwen</td><td>Partij voor de Dieren</td><td>8</td><td>Wyler (DE)</td><td>20</td></tr>
+<tr><td></td><td>Kirsten van den Hul</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>8</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Simone van Saarloos</td><td>Artikel 1</td><td>8</td><td>Amsterdam</td><td>18</td></tr>
+<tr><td></td><td>Sophie Andriol</td><td>OndernemersPartij</td><td>8</td><td>Groningen</td><td>20</td></tr>
+<tr><td></td><td>Wilma Schrover</td><td>50PLUS</td><td>8</td><td>s-Hertogenbosch</td><td>20</td></tr>
+<tr><td></td><td>Yasemin Karga</td><td>Niet Stemmers</td><td>8</td><td>Amsterdam</td><td>16</td></tr>
+<tr><td></td><td>Hanke Bruins Slot</td><td>CDA</td><td>9</td><td>Utrecht</td><td>20</td></tr>
+<tr><td></td><td>Inge Jochems</td><td>NIEUWE WEGEN</td><td>9</td><td>Zundert</td><td>20</td></tr>
+<tr><td></td><td>Lilian Helder</td><td>PVV (Partij voor de Vrijheid)</td><td>9</td><td>Venlo</td><td>20</td></tr>
+<tr><td></td><td>Marisa Koolbergen</td><td>DENK</td><td>9</td><td>Alkmaar</td><td>20</td></tr>
+<tr><td></td><td>Nelly Nieuwenhuizen</td><td>Lokaal in de Kamer</td><td>9</td><td>Peize</td><td>15</td></tr>
+<tr><td></td><td>Vivienne Groenewoud</td><td>GeenPeil</td><td>9</td><td>Zeist</td><td>19</td></tr>
+<tr><td></td><td>Elovena Ackerman</td><td>De Burger Beweging</td><td>10</td><td>Pinhel (PT)</td><td>19</td></tr>
+<tr><td></td><td>Joëlle Gooijer-Medema</td><td>ChristenUnie</td><td>10</td><td>Delft</td><td>20</td></tr>
+<tr><td></td><td>Lilianne Ploumen</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>10</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Rachel Held</td><td>Niet Stemmers</td><td>10</td><td>Amsterdam</td><td>16</td></tr>
+<tr><td></td><td>Yvonne de Heer-Seveke</td><td>Lokaal in de Kamer</td><td>10</td><td>Breda</td><td>15</td></tr>
+<tr><td></td><td>Zlata Brouwer</td><td>Forum voor Democratie</td><td>10</td><td>Hilversum</td><td>20</td></tr>
+<tr><td></td><td>Anne Kuik</td><td>CDA</td><td>11</td><td>Groningen</td><td>20</td></tr>
+<tr><td></td><td>Carolien Pentinga</td><td>Niet Stemmers</td><td>11</td><td>Amsterdam</td><td>16</td></tr>
+<tr><td></td><td>Joke van Ruitenbeek-Schonewille</td><td>Lokaal in de Kamer</td><td>11</td><td>Heerhugowaard</td><td>15</td></tr>
+<tr><td></td><td>Juanita Hernández González</td><td>Artikel 1</td><td>11</td><td>Strijen</td><td>18</td></tr>
+<tr><td></td><td>Marit van Splunter</td><td>DENK</td><td>11</td><td>Zwolle</td><td>20</td></tr>
+<tr><td></td><td>Maruschka Post</td><td>StemNL</td><td>11</td><td>Sint-Michielsgestel</td><td>9</td></tr>
+<tr><td></td><td>Reinette de Boer</td><td>MenS en Spirit / Basisinkomen Partij / V-R</td><td>11</td><td>Haaksbergen</td><td>2</td></tr>
+<tr><td></td><td>Suzanne Kröger</td><td>GROENLINKS</td><td>11</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Eva Akerboom</td><td>Partij voor de Dieren</td><td>12</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Frieda Bos</td><td>De Burger Beweging</td><td>12</td><td>Gieten</td><td>19</td></tr>
+<tr><td></td><td>Gerdien Rots</td><td>ChristenUnie</td><td>12</td><td>Zwolle</td><td>20</td></tr>
+<tr><td></td><td>Helma Lodders</td><td>VVD</td><td>12</td><td>Zeewolde</td><td>20</td></tr>
+<tr><td></td><td>Joke de Kock</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>12</td><td>Terheijden</td><td>20</td></tr>
+<tr><td></td><td>Judith Plasman-Van Ligten</td><td>Niet Stemmers</td><td>12</td><td>Amsterdam</td><td>16</td></tr>
+<tr><td></td><td>Nevin Özütok</td><td>GROENLINKS</td><td>12</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Nine Kooiman</td><td>SP (Socialistische Partij)</td><td>12</td><td>Utrecht</td><td>20</td></tr>
+<tr><td></td><td>Pauline Streuper</td><td>MenS en Spirit / Basisinkomen Partij / V-R</td><td>12</td><td>Lelystad</td><td>1</td></tr>
+<tr><td></td><td>Yvonne de Vries</td><td>NIEUWE WEGEN</td><td>12</td><td>Wassenaar</td><td>20</td></tr>
+<tr><td></td><td>Agnes Mulder</td><td>CDA</td><td>13</td><td>Assen</td><td>20</td></tr>
+<tr><td></td><td>Carola Dieudonné</td><td>Forum voor Democratie</td><td>13</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Gracia Nabi</td><td>StemNL</td><td>13</td><td>Vlissingen</td><td>9</td></tr>
+<tr><td></td><td>Jessica Van Eijs</td><td>Democraten 66 (D66)</td><td>13</td><td>Eindhoven</td><td>20</td></tr>
+<tr><td></td><td>Petra van Veeren</td><td>50PLUS</td><td>13</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Rabia Karaman</td><td>DENK</td><td>13</td><td>Arnhem</td><td>20</td></tr>
+<tr><td></td><td>Bente Becker</td><td>VVD</td><td>14</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Bo van Scheyen</td><td>NIEUWE WEGEN</td><td>14</td><td>Vlissingen</td><td>20</td></tr>
+<tr><td></td><td>Danai van Weerdenburg</td><td>PVV (Partij voor de Vrijheid)</td><td>14</td><td>Amstelveen</td><td>20</td></tr>
+<tr><td></td><td>Diana van der Kraats</td><td>Lokaal in de Kamer</td><td>14</td><td>Westerland</td><td>15</td></tr>
+<tr><td></td><td>Lisa Westerveld</td><td>GROENLINKS</td><td>14</td><td>Nijmegen</td><td>20</td></tr>
+<tr><td></td><td>Marianella Leito</td><td>Artikel 1</td><td>14</td><td>Amsterdam</td><td>18</td></tr>
+<tr><td></td><td>Marith Volp</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>14</td><td>Haarlem</td><td>20</td></tr>
+<tr><td></td><td>Salima Belhaj</td><td>Democraten 66 (D66)</td><td>14</td><td>Rotterdam</td><td>20</td></tr>
+<tr><td></td><td>Stephanie van Voorthuizen</td><td>Partij voor de Dieren</td><td>14</td><td>Venlo</td><td>20</td></tr>
+<tr><td></td><td>Hanneke Bijl</td><td>De Burger Beweging</td><td>15</td><td>Huizen</td><td>19</td></tr>
+<tr><td></td><td>Harmke Vlieg-Kempe</td><td>ChristenUnie</td><td>15</td><td>Assen</td><td>20</td></tr>
+<tr><td></td><td>Laura Bromet</td><td>GROENLINKS</td><td>15</td><td>Monnickendam</td><td>20</td></tr>
+<tr><td></td><td>Maria Acosta</td><td>StemNL</td><td>15</td><td>Zandvoort</td><td>9</td></tr>
+<tr><td></td><td>Annemieke Bakker</td><td>Artikel 1</td><td>16</td><td>Hilversum</td><td>18</td></tr>
+<tr><td></td><td>Karen Gerbrands</td><td>PVV (Partij voor de Vrijheid)</td><td>16</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Keklik Yücel</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>16</td><td>Deventer</td><td>20</td></tr>
+<tr><td></td><td>Natascha Kroonstuiver</td><td>50PLUS</td><td>16</td><td>Venlo</td><td>20</td></tr>
+<tr><td></td><td>Sophie Hermans</td><td>VVD</td><td>16</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Anne-Ruth Wertheim</td><td>Artikel 1</td><td>17</td><td>Amsterdam</td><td>18</td></tr>
+<tr><td></td><td>Carla van Viegen</td><td>Partij voor de Dieren</td><td>17</td><td>Pijnacker</td><td>20</td></tr>
+<tr><td></td><td>Jeane Dijkstra</td><td>StemNL</td><td>17</td><td>Ermelo</td><td>9</td></tr>
+<tr><td></td><td>Jeanet Pijpker</td><td>NIEUWE WEGEN</td><td>17</td><td>Alphen aan den Rijn</td><td>20</td></tr>
+<tr><td></td><td>Antje Diertens</td><td>Democraten 66 (D66)</td><td>18</td><td>Groningen</td><td>20</td></tr>
+<tr><td></td><td>Aukje de Vries</td><td>VVD</td><td>18</td><td>Leeuwarden</td><td>20</td></tr>
+<tr><td></td><td>Emine Bozkurt</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>18</td><td>Zaandam</td><td>20</td></tr>
+<tr><td></td><td>Gabriëlle Popken</td><td>PVV (Partij voor de Vrijheid)</td><td>18</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Hiltje Keller</td><td>Partij voor de Dieren</td><td>18</td><td>Driebergen-Rijsenburg</td><td>20</td></tr>
+<tr><td></td><td>Indi Hondema</td><td>De Burger Beweging</td><td>18</td><td>Oppenhuizen</td><td>19</td></tr>
+<tr><td></td><td>Ingrid Schaefer</td><td>MenS en Spirit / Basisinkomen Partij / V-R</td><td>18</td><td>Harmelen</td><td>2</td></tr>
+<tr><td></td><td>Joba van den Berg-Jansen</td><td>CDA</td><td>18</td><td>Goes</td><td>20</td></tr>
+<tr><td></td><td>Keziban Ince</td><td>DENK</td><td>18</td><td>Rotterdam</td><td>20</td></tr>
+<tr><td></td><td>Laurence Stassen</td><td>VNL (VoorNederland)</td><td>18</td><td>Echt</td><td>20</td></tr>
+<tr><td></td><td>Marijke Heuvelink</td><td>ChristenUnie</td><td>18</td><td>Oudheusden</td><td>20</td></tr>
+<tr><td></td><td>Monique van de Griendt</td><td>50PLUS</td><td>18</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Annemarie de Beer</td><td>MenS en Spirit / Basisinkomen Partij / V-R</td><td>19</td><td>Franeker</td><td>2</td></tr>
+<tr><td></td><td>Brigitte Bakker</td><td>StemNL</td><td>19</td><td>Dordrecht</td><td>9</td></tr>
+<tr><td></td><td>Dilan Yeşilgöz-Zegerius</td><td>VVD</td><td>19</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Gloria Wekker</td><td>Artikel 1</td><td>19</td><td>Amsterdam</td><td>18</td></tr>
+<tr><td></td><td>Hanneke Willemstein</td><td>NIEUWE WEGEN</td><td>19</td><td>Alphen-Chaam</td><td>20</td></tr>
+<tr><td></td><td>Isabelle Diks</td><td>GROENLINKS</td><td>19</td><td>Leeuwarden</td><td>20</td></tr>
+<tr><td></td><td>Janita Venema</td><td>De Burger Beweging</td><td>19</td><td>Leeuwarden</td><td>19</td></tr>
+<tr><td></td><td>Michelle van Doorn</td><td>Partij voor de Dieren</td><td>19</td><td>Nijmegen</td><td>20</td></tr>
+<tr><td></td><td>Anja Meulenbelt</td><td>Artikel 1</td><td>20</td><td>Amsterdam</td><td>18</td></tr>
+<tr><td></td><td>Astrid de Groot</td><td>Forum voor Democratie</td><td>20</td><td>Heukelum</td><td>20</td></tr>
+<tr><td></td><td>Christa Oosterbaan</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>20</td><td>West-Terschelling</td><td>20</td></tr>
+<tr><td></td><td>Hanneke Willemstein</td><td>NIEUWE WEGEN</td><td>20</td><td>Alphen-Chaam</td><td>20</td></tr>
+<tr><td></td><td>Lenny Geluk-Poortvliet</td><td>CDA</td><td>20</td><td>Zeist</td><td>20</td></tr>
+<tr><td></td><td>Monica den Boer</td><td>Democraten 66 (D66)</td><td>20</td><td>Maasdam</td><td>20</td></tr>
+<tr><td></td><td>Pascale Plusquin</td><td>Partij voor de Dieren</td><td>20</td><td>Heerlen</td><td>20</td></tr>
+<tr><td></td><td>Willemien Treurniet-Klapwijk</td><td>ChristenUnie</td><td>20</td><td>Middelburg</td><td>20</td></tr>
+<tr><td></td><td>Ans van der Velde</td><td>Lokaal in de Kamer</td><td>21</td><td>Eersel</td><td>15</td></tr>
+<tr><td></td><td>Hilde Palland</td><td>CDA</td><td>21</td><td>Kampen</td><td>20</td></tr>
+<tr><td></td><td>Jolanda Kirpensteijn</td><td>De Burger Beweging</td><td>21</td><td>Amsterdam</td><td>19</td></tr>
+<tr><td></td><td>Ockje Tellegen</td><td>VVD</td><td>21</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Cathelijne Bouwkamp</td><td>GROENLINKS</td><td>22</td><td>Arnhem</td><td>20</td></tr>
+<tr><td></td><td>Ilse Smit</td><td>Partij voor de Dieren</td><td>22</td><td>Ede</td><td>20</td></tr>
+<tr><td></td><td>Jolanda Wilshaus</td><td>De Burger Beweging</td><td>22</td><td>Bunnik</td><td>19</td></tr>
+<tr><td></td><td>Loes Ypma</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>22</td><td>Woerden</td><td>20</td></tr>
+<tr><td></td><td>Simone Kennedy-Doornbos</td><td>ChristenUnie</td><td>22</td><td>Amersfoort</td><td>20</td></tr>
+<tr><td></td><td>Wytske de Pater-Postma</td><td>CDA</td><td>22</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Adriana Hernández Martínez</td><td>50PLUS</td><td>23</td><td>s-Hertogenbosch</td><td>20</td></tr>
+<tr><td></td><td>Annette Valent-Groot</td><td>Lokaal in de Kamer</td><td>23</td><td>Heerhugowaard</td><td>15</td></tr>
+<tr><td></td><td>Karina Jansen</td><td>De Burger Beweging</td><td>23</td><td>Brunssum</td><td>19</td></tr>
+<tr><td></td><td>Leonie Vestering</td><td>Partij voor de Dieren</td><td>23</td><td>Almere</td><td>20</td></tr>
+<tr><td></td><td>Sun Yoon van Dijk-van Leeuwen</td><td>SP (Socialistische Partij)</td><td>23</td><td>Rotterdam</td><td>20</td></tr>
+<tr><td></td><td>Conny de Bree</td><td>Lokaal in de Kamer</td><td>24</td><td>Hoofddorp</td><td>15</td></tr>
+<tr><td></td><td>Kitty Haccou</td><td>De Burger Beweging</td><td>24</td><td>Valthe</td><td>19</td></tr>
+<tr><td></td><td>Marijke van Beukering-Huijbregts</td><td>Democraten 66 (D66)</td><td>24</td><td>IJsselstein</td><td>20</td></tr>
+<tr><td></td><td>Marit Maij</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>24</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Maya van der Steenhoven</td><td>GROENLINKS</td><td>24</td><td>Leiden</td><td>20</td></tr>
+<tr><td></td><td>Kirsten de Wrede</td><td>Partij voor de Dieren</td><td>25</td><td>Groningen</td><td>20</td></tr>
+<tr><td></td><td>Saskia Koning</td><td>Forum voor Democratie</td><td>25</td><td>Muiderberg</td><td>20</td></tr>
+<tr><td></td><td>Erika Mauritz</td><td>MenS en Spirit / Basisinkomen Partij / V-R</td><td>26</td><td>Haarlem</td><td>2</td></tr>
+<tr><td></td><td>Franca Eurlings-Tonnaer</td><td>Democraten 66 (D66)</td><td>26</td><td>Maastricht</td><td>20</td></tr>
+<tr><td></td><td>Jet Weigand-Timmer</td><td>ChristenUnie</td><td>26</td><td>Ermelo</td><td>20</td></tr>
+<tr><td></td><td>Marion van der Kleij</td><td>GROENLINKS</td><td>26</td><td>Mechelen</td><td>20</td></tr>
+<tr><td></td><td>Reshma Roopram</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>26</td><td>Barendrecht</td><td>20</td></tr>
+<tr><td></td><td>Rinie van der Zanden</td><td>Partij voor de Dieren</td><td>26</td><td>Reitsum</td><td>20</td></tr>
+<tr><td></td><td>Vivianne Heijnen</td><td>CDA</td><td>26</td><td>Maastricht</td><td>20</td></tr>
+<tr><td></td><td>An Kuiper</td><td>MenS en Spirit / Basisinkomen Partij / V-R</td><td>27</td><td>Utrecht</td><td>1</td></tr>
+<tr><td></td><td>Daniëlle de Winter</td><td>PVV (Partij voor de Vrijheid)</td><td>27</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Jana Hurtado-Panek</td><td>NIEUWE WEGEN</td><td>27</td><td>Zoetermeer</td><td>20</td></tr>
+<tr><td></td><td>Trees Janssens</td><td>Partij voor de Dieren</td><td>27</td><td>Middelburg</td><td>20</td></tr>
+<tr><td></td><td>Chris Schotman</td><td>CDA</td><td>28</td><td>Dronten</td><td>20</td></tr>
+<tr><td></td><td>Esther Kaper-Hartenberg</td><td>ChristenUnie</td><td>28</td><td>Kortenhoef</td><td>20</td></tr>
+<tr><td></td><td>Giselle Schellekens</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>28</td><td>Nijmegen</td><td>20</td></tr>
+<tr><td></td><td>Ilse Bezaan</td><td>PVV (Partij voor de Vrijheid)</td><td>28</td><td>Blaricum</td><td>20</td></tr>
+<tr><td></td><td>Ines Kostić</td><td>Partij voor de Dieren</td><td>28</td><td>Hilversum</td><td>20</td></tr>
+<tr><td></td><td>Martine van Bemmel</td><td>Democraten 66 (D66)</td><td>28</td><td>Almere</td><td>20</td></tr>
+<tr><td></td><td>Patty Hamerslag</td><td>SP (Socialistische Partij)</td><td>28</td><td>s-Hertogenbosch</td><td>20</td></tr>
+<tr><td></td><td>Rascha Wisse</td><td>MenS en Spirit / Basisinkomen Partij / V-R</td><td>28</td><td>Egmond aan den Hoef</td><td>1</td></tr>
+<tr><td></td><td>Rosa Molenaar</td><td>50PLUS</td><td>28</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Anja Hazekamp</td><td>Partij voor de Dieren</td><td>29</td><td>Alteveer</td><td>20</td></tr>
+<tr><td></td><td>Janet Duursma</td><td>GROENLINKS</td><td>29</td><td>Delden</td><td>20</td></tr>
+<tr><td></td><td>Joyce Kardol</td><td>PVV (Partij voor de Vrijheid)</td><td>29</td><td>Helmond</td><td>20</td></tr>
+<tr><td></td><td>Kristie Lamers</td><td>Democraten 66 (D66)</td><td>29</td><td>Nijmegen</td><td>20</td></tr>
+<tr><td></td><td>Marielle Cornielje</td><td>De Burger Beweging</td><td>29</td><td>Nijmegen</td><td>19</td></tr>
+<tr><td></td><td>Simone de Boer</td><td>NIEUWE WEGEN</td><td>29</td><td>Tiel</td><td>20</td></tr>
+<tr><td></td><td>Armağan Önder</td><td>GROENLINKS</td><td>30</td><td>Tiel</td><td>20</td></tr>
+<tr><td></td><td>Chantal Nijkerken-de Haan</td><td>VVD</td><td>30</td><td>Schinveld</td><td>20</td></tr>
+<tr><td></td><td>Karin Zwinkels</td><td>CDA</td><td>30</td><td>Monster</td><td>20</td></tr>
+<tr><td></td><td>Mirthe Biemans</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>30</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Nicole Temmink</td><td>SP (Socialistische Partij)</td><td>30</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Titia de Meijer</td><td>MenS en Spirit / Basisinkomen Partij / V-R</td><td>30</td><td>Vught</td><td>1</td></tr>
+<tr><td></td><td>Ankie van Tatenhove-Meesen</td><td>ChristenUnie</td><td>31</td><td>Berkel en Rodenrijs</td><td>20</td></tr>
+<tr><td></td><td>Dina Verbrugge-Wormgoor</td><td>Democraten 66 (D66)</td><td>31</td><td>Vlissingen</td><td>20</td></tr>
+<tr><td></td><td>Esther Hanemaaijer</td><td>CDA</td><td>31</td><td>Dokkum</td><td>20</td></tr>
+<tr><td></td><td>Marijke Hanff</td><td>De Burger Beweging</td><td>31</td><td>Groesbeek</td><td>19</td></tr>
+<tr><td></td><td>Nina de Ridder</td><td>SP (Socialistische Partij)</td><td>31</td><td>Beverwijk</td><td>20</td></tr>
+<tr><td></td><td>Olga de Meij</td><td>50PLUS</td><td>31</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>An van Pijkeren</td><td>PVV (Partij voor de Vrijheid)</td><td>32</td><td>Bunschoten-Spakenburg</td><td>20</td></tr>
+<tr><td></td><td>Denise van Sluijs</td><td>SP (Socialistische Partij)</td><td>32</td><td>Emmeloord</td><td>20</td></tr>
+<tr><td></td><td>Janny Joosten-Leijendekker</td><td>ChristenUnie</td><td>32</td><td>Enschede</td><td>20</td></tr>
+<tr><td></td><td>Jeanet van der Laan</td><td>Democraten 66 (D66)</td><td>32</td><td>Lisse</td><td>20</td></tr>
+<tr><td></td><td>Mei Li Vos</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>32</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Nina van der Burgt</td><td>De Burger Beweging</td><td>32</td><td>Uden</td><td>19</td></tr>
+<tr><td></td><td>Aïsha Akhiat</td><td>SP (Socialistische Partij)</td><td>33</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Bibi Dumon Tak</td><td>Partij voor de Dieren</td><td>33</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Loes Zuidervaart</td><td>ChristenUnie</td><td>33</td><td>Arnhem</td><td>20</td></tr>
+<tr><td></td><td>Loulou van Ravensteijn</td><td>Piratenpartij</td><td>33</td><td>Amsterdam</td><td>19</td></tr>
+<tr><td></td><td>Marischa Kip</td><td>CDA</td><td>33</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Bouchra Dibi</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>34</td><td>Utrecht</td><td>20</td></tr>
+<tr><td></td><td>Cora Smelik</td><td>GROENLINKS</td><td>34</td><td>Deventer</td><td>20</td></tr>
+<tr><td></td><td>Floor Ziegler</td><td>Piratenpartij</td><td>34</td><td>Amsterdam</td><td>19</td></tr>
+<tr><td></td><td>Jolanda van Hulst</td><td>50PLUS</td><td>34</td><td>Veldhoven</td><td>20</td></tr>
+<tr><td></td><td>Nicole van Gemert</td><td>SP (Socialistische Partij)</td><td>34</td><td>Utrecht</td><td>20</td></tr>
+<tr><td></td><td>Purusha van de Graaf</td><td>De Burger Beweging</td><td>34</td><td>Olburgen</td><td>19</td></tr>
+<tr><td></td><td>Inge Jongman-Mollema</td><td>ChristenUnie</td><td>35</td><td>Groningen</td><td>20</td></tr>
+<tr><td></td><td>Rhianna Gralike</td><td>50PLUS</td><td>35</td><td>Dronten</td><td>20</td></tr>
+<tr><td></td><td>Ria de Korte-Verhoef</td><td>CDA</td><td>35</td><td>Baambrugge</td><td>20</td></tr>
+<tr><td></td><td>Sophie Schers</td><td>GROENLINKS</td><td>35</td><td>Utrecht</td><td>20</td></tr>
+<tr><td></td><td>Amma Asante</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>36</td><td>Badhoevedorp</td><td>20</td></tr>
+<tr><td></td><td>Anita de Vos</td><td>SP (Socialistische Partij)</td><td>36</td><td>Zonnemaire</td><td>20</td></tr>
+<tr><td></td><td>Noëlle Sanders</td><td>Democraten 66 (D66)</td><td>36</td><td>Amersfoort</td><td>20</td></tr>
+<tr><td></td><td>Antoinette Laan-Geselschap</td><td>VVD</td><td>37</td><td>Rotterdam</td><td>20</td></tr>
+<tr><td></td><td>Ineke Bekkering</td><td>SP (Socialistische Partij)</td><td>37</td><td>Hoogeveen</td><td>20</td></tr>
+<tr><td></td><td>Malou Herstel</td><td>Partij voor de Dieren</td><td>37</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Marianne Hilte</td><td>50PLUS</td><td>37</td><td>Zuidland</td><td>8</td></tr>
+<tr><td></td><td>Hülya Kat</td><td>Democraten 66 (D66)</td><td>38</td><td>IJmuiden</td><td>20</td></tr>
+<tr><td></td><td>Inez Staarink</td><td>SP (Socialistische Partij)</td><td>38</td><td>Leiden</td><td>20</td></tr>
+<tr><td></td><td>Joyce Vermue</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>38</td><td>Schoondijke</td><td>20</td></tr>
+<tr><td></td><td>Judith Tielen</td><td>VVD</td><td>38</td><td>Utrecht</td><td>20</td></tr>
+<tr><td></td><td>Marianne Hilte</td><td>50PLUS</td><td>38</td><td>Zuidland</td><td>8</td></tr>
+<tr><td></td><td>Mensje van der Steen</td><td>Partij voor de Dieren</td><td>38</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Tessa Dulfer</td><td>PVV (Partij voor de Vrijheid)</td><td>38</td><td>Papendrecht</td><td>20</td></tr>
+<tr><td></td><td>Annacarina Klein</td><td>ChristenUnie</td><td>39</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Barbara Gardeniers</td><td>CDA</td><td>39</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Eva Meijer</td><td>Partij voor de Dieren</td><td>39</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Marjoleine Snaas</td><td>GROENLINKS</td><td>39</td><td>Duiven</td><td>20</td></tr>
+<tr><td></td><td>Mieke van Bree</td><td>50PLUS</td><td>39</td><td>Eindhoven</td><td>4</td></tr>
+<tr><td></td><td>Roula Tourgaidis</td><td>De Burger Beweging</td><td>39</td><td>Amstelveen</td><td>19</td></tr>
+<tr><td></td><td>Anna-Lena Hedin-Penninx</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>40</td><td>Silvolde</td><td>20</td></tr>
+<tr><td></td><td>Charlotte Mutsaers</td><td>Partij voor de Dieren</td><td>40</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Fenna Feenstra</td><td>SP (Socialistische Partij)</td><td>40</td><td>Sneek</td><td>20</td></tr>
+<tr><td></td><td>Marijn Bosman</td><td>Democraten 66 (D66)</td><td>40</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Daniëlle Hirsch</td><td>GROENLINKS</td><td>41</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Els Kooij-Bas</td><td>ChristenUnie</td><td>41</td><td>IJsselstein</td><td>20</td></tr>
+<tr><td></td><td>Annemarie Postma</td><td>Partij voor de Dieren</td><td>42</td><td>Oudehorne</td><td>20</td></tr>
+<tr><td></td><td>Cindy Vorselman-Derksen</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>42</td><td>Assen</td><td>20</td></tr>
+<tr><td></td><td>Mariska ten Heuw</td><td>SP (Socialistische Partij)</td><td>42</td><td>Hengelo (O)</td><td>20</td></tr>
+<tr><td></td><td>Nathalie Choenni</td><td>PVV (Partij voor de Vrijheid)</td><td>42</td><td>Oosterhout</td><td>20</td></tr>
+<tr><td></td><td>Lot van Hooijdonk</td><td>GROENLINKS</td><td>43</td><td>Utrecht</td><td>20</td></tr>
+<tr><td></td><td>Renske Helmer-Englebert</td><td>SP (Socialistische Partij)</td><td>43</td><td>Nijmegen</td><td>20</td></tr>
+<tr><td></td><td>Anna van den Boogaard</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>44</td><td>Leiden</td><td>20</td></tr>
+<tr><td></td><td>Ixora Balootje</td><td>ChristenUnie</td><td>44</td><td>Rotterdam</td><td>20</td></tr>
+<tr><td></td><td>Mirjam Rotenstreich</td><td>Partij voor de Dieren</td><td>44</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Corine van Dun</td><td>Democraten 66 (D66)</td><td>45</td><td>Utrecht</td><td>20</td></tr>
+<tr><td></td><td>Ger van Unen</td><td>SP (Socialistische Partij)</td><td>45</td><td>Kloosterzande</td><td>4</td></tr>
+<tr><td></td><td>Lenie Scholten</td><td>GROENLINKS</td><td>45</td><td>Nijmegen</td><td>20</td></tr>
+<tr><td></td><td>Lieke van Rossum</td><td>SP (Socialistische Partij)</td><td>45</td><td>Delft</td><td>5</td></tr>
+<tr><td></td><td>Nel Douw-van Dam</td><td>SP (Socialistische Partij)</td><td>45</td><td>Hoorn</td><td>3</td></tr>
+<tr><td></td><td>Rosita van Gijlswijk</td><td>SP (Socialistische Partij)</td><td>45</td><td>Groningen</td><td>4</td></tr>
+<tr><td></td><td>Teske de Schepper</td><td>Partij voor de Dieren</td><td>45</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Tjitske Hoekstra</td><td>SP (Socialistische Partij)</td><td>45</td><td>Rutten</td><td>4</td></tr>
+<tr><td></td><td>Anja Haga</td><td>ChristenUnie</td><td>46</td><td>Dokkum</td><td>20</td></tr>
+<tr><td></td><td>Annemiek Schrijver</td><td>Partij voor de Dieren</td><td>46</td><td>Huizen</td><td>20</td></tr>
+<tr><td></td><td>Caroline Kooman</td><td>PVV (Partij voor de Vrijheid)</td><td>46</td><td>Sluiskil</td><td>20</td></tr>
+<tr><td></td><td>Ellis Müller</td><td>SP (Socialistische Partij)</td><td>46</td><td>Zutphen</td><td>4</td></tr>
+<tr><td></td><td>Emmaly Scheepstra</td><td>CDA</td><td>46</td><td>Een</td><td>1</td></tr>
+<tr><td></td><td>Esther Schut</td><td>SP (Socialistische Partij)</td><td>46</td><td>Meppel</td><td>4</td></tr>
+<tr><td></td><td>Krista van Velzen</td><td>SP (Socialistische Partij)</td><td>46</td><td>s-Gravenhage</td><td>5</td></tr>
+<tr><td></td><td>Patricia de Milliano</td><td>CDA</td><td>46</td><td>Oostburg</td><td>1</td></tr>
+<tr><td></td><td>Remine Alberts-Oosterbaan</td><td>SP (Socialistische Partij)</td><td>46</td><td>Amsterdam</td><td>3</td></tr>
+<tr><td></td><td>Tamar Schrofer</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>46</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Christine Eskes</td><td>CDA</td><td>47</td><td>Rotterdam</td><td>1</td></tr>
+<tr><td></td><td>Fadime Şimşek</td><td>CDA</td><td>47</td><td>Haarlem</td><td>1</td></tr>
+<tr><td></td><td>Hanneke Wiersema</td><td>CDA</td><td>47</td><td>Eelde</td><td>1</td></tr>
+<tr><td></td><td>Ilse Saris</td><td>CDA</td><td>47</td><td>Winterswijk</td><td>2</td></tr>
+<tr><td></td><td>Johanna Besteman</td><td>CDA</td><td>47</td><td>Rijswijk</td><td>3</td></tr>
+<tr><td></td><td>Kelly Regterschot</td><td>VVD</td><td>47</td><td>Landgraaf</td><td>20</td></tr>
+<tr><td></td><td>Lisanne Spanbroek</td><td>CDA</td><td>47</td><td>Olst</td><td>1</td></tr>
+<tr><td></td><td>Nelleke de Smoker-van Andel</td><td>Democraten 66 (D66)</td><td>47</td><td>Dordrecht</td><td>20</td></tr>
+<tr><td></td><td>Nienke Homan-Brinkman</td><td>GROENLINKS</td><td>47</td><td>Groningen</td><td>20</td></tr>
+<tr><td></td><td>Steffi Rombouts</td><td>CDA</td><td>47</td><td>Amsterdam</td><td>1</td></tr>
+<tr><td></td><td>Anne-Marie Mineur</td><td>SP (Socialistische Partij)</td><td>48</td><td>De Bilt</td><td>4</td></tr>
+<tr><td></td><td>Babette van Veen</td><td>Partij voor de Dieren</td><td>48</td><td>Bilthoven</td><td>20</td></tr>
+<tr><td></td><td>Bianca Verweij</td><td>SP (Socialistische Partij)</td><td>48</td><td>Hilversum</td><td>3</td></tr>
+<tr><td></td><td>Carmen Hoogeveen</td><td>Democraten 66 (D66)</td><td>48</td><td>Emmen</td><td>20</td></tr>
+<tr><td></td><td>Hillie de Koe</td><td>SP (Socialistische Partij)</td><td>48</td><td>Lemmer</td><td>4</td></tr>
+<tr><td></td><td>Lies van Aelst</td><td>SP (Socialistische Partij)</td><td>48</td><td>Gorinchem</td><td>5</td></tr>
+<tr><td></td><td>Mariëtte Nooijens</td><td>CDA</td><td>48</td><td>Etten-Leur</td><td>1</td></tr>
+<tr><td></td><td>Marinka Mulder</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>48</td><td>Culemborg</td><td>20</td></tr>
+<tr><td></td><td>Nathalie van der Zanden-van der Weijden</td><td>SP (Socialistische Partij)</td><td>48</td><td>Helmond</td><td>4</td></tr>
+<tr><td></td><td>Aagje Zeeman</td><td>CDA</td><td>49</td><td>Marken</td><td>1</td></tr>
+<tr><td></td><td>Annelies Futselaar</td><td>SP (Socialistische Partij)</td><td>49</td><td>Enschede</td><td>4</td></tr>
+<tr><td></td><td>Annemiek Roes</td><td>SP (Socialistische Partij)</td><td>49</td><td>Ulft</td><td>4</td></tr>
+<tr><td></td><td>Annemieke van de Ven</td><td>CDA</td><td>49</td><td>Veghel</td><td>1</td></tr>
+<tr><td></td><td>Georgina Verbaan</td><td>Partij voor de Dieren</td><td>49</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Marleen Sanderse</td><td>CDA</td><td>49</td><td>Naarden</td><td>1</td></tr>
+<tr><td></td><td>Marleen van Dam</td><td>SP (Socialistische Partij)</td><td>49</td><td>Purmerend</td><td>3</td></tr>
+<tr><td></td><td>Marleen van Rijnsbergen</td><td>SP (Socialistische Partij)</td><td>49</td><td>Sittard</td><td>4</td></tr>
+<tr><td></td><td>Mieke Hoek</td><td>50PLUS</td><td>49</td><td>Vreeland</td><td>20</td></tr>
+<tr><td></td><td>Mirjam Pauwels-Paauw</td><td>VVD</td><td>49</td><td>Ruinen</td><td>20</td></tr>
+<tr><td></td><td>Roos van Gelderen</td><td>SP (Socialistische Partij)</td><td>49</td><td>Leiden</td><td>5</td></tr>
+<tr><td></td><td>Suzanne van Triest</td><td>CDA</td><td>49</td><td>Amsterdam</td><td>1</td></tr>
+<tr><td></td><td>Bouwien Rutten</td><td>CDA</td><td>50</td><td>Dinkelland</td><td>1</td></tr>
+<tr><td></td><td>Hannie van Leeuwen</td><td>CDA</td><td>50</td><td>Rotterdam</td><td>11</td></tr>
+<tr><td></td><td>Ineke van Gent</td><td>GROENLINKS</td><td>50</td><td>Groningen</td><td>20</td></tr>
+<tr><td></td><td>Sultan Günal-Gezer</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>50</td><td>Uden</td><td>20</td></tr>
+<tr><td></td><td>Thilla Franken</td><td>CDA</td><td>50</td><td>Assen</td><td>1</td></tr>
+<tr><td></td><td>Els Boot</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>52</td><td>Rotterdam</td><td>20</td></tr>
+<tr><td></td><td>Wendelien Tönjann-Levert</td><td>VVD</td><td>53</td><td>Oegstgeest</td><td>20</td></tr>
+<tr><td></td><td>Petra Koenders</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>54</td><td>Breda</td><td>20</td></tr>
+<tr><td></td><td>Laura Menenti</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>56</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Rosemarijn Dral</td><td>VVD</td><td>56</td><td>Oostzaan</td><td>20</td></tr>
+<tr><td></td><td>Irene Korting</td><td>VVD</td><td>57</td><td>Swifterbant</td><td>20</td></tr>
+<tr><td></td><td>Kathy Arends-Drijver</td><td>VVD</td><td>58</td><td>Bergschenhoek</td><td>20</td></tr>
+<tr><td></td><td>Lou Repetur</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>58</td><td>Utrecht</td><td>20</td></tr>
+<tr><td></td><td>Anita Engbers</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>60</td><td>Gouda</td><td>20</td></tr>
+<tr><td></td><td>Peggy Wijntuin</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>62</td><td>Rotterdam</td><td>20</td></tr>
+<tr><td></td><td>Tanja Haseloop-Amsing</td><td>VVD</td><td>63</td><td>Leek</td><td>20</td></tr>
+<tr><td></td><td>Anja van Zantvoort</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>64</td><td>Zoetermeer</td><td>20</td></tr>
+<tr><td></td><td>Jenny Elbertsen</td><td>VVD</td><td>65</td><td>Apeldoorn</td><td>20</td></tr>
+<tr><td></td><td>Anne Dankert</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>66</td><td>s-Gravenhage</td><td>20</td></tr>
+<tr><td></td><td>Saskia van Dijk</td><td>VVD</td><td>66</td><td>IJsselstein</td><td>20</td></tr>
+<tr><td></td><td>Ivonne Voigt</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>68</td><td>Venray</td><td>20</td></tr>
+<tr><td></td><td>Linda Böcker</td><td>VVD</td><td>68</td><td>Delft</td><td>20</td></tr>
+<tr><td></td><td>Denise Klomp</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>70</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Yvonne Welter</td><td>VVD</td><td>70</td><td>Abcoude</td><td>20</td></tr>
+<tr><td></td><td>Miranda Joziasse</td><td>VVD</td><td>72</td><td>Almere</td><td>20</td></tr>
+<tr><td></td><td>Tirza Houben</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>72</td><td>Roermond</td><td>20</td></tr>
+<tr><td></td><td>Anja Prins</td><td>VVD</td><td>74</td><td>Apeldoorn</td><td>20</td></tr>
+<tr><td></td><td>Sandra Doevendans</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>74</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Hennie Huisman-Peelen</td><td>VVD</td><td>75</td><td>Texel</td><td>20</td></tr>
+<tr><td></td><td>Annelies de Jonge</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>Zutphen</td><td>1</td></tr>
+<tr><td></td><td>Bea van Beers</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>Dongen</td><td>1</td></tr>
+<tr><td></td><td>Carine Bloemhoff</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>Groningen</td><td>1</td></tr>
+<tr><td></td><td>Gadiza Bouazani</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>Utrecht</td><td>1</td></tr>
+<tr><td></td><td>Hedy d' Ancona</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>Amsterdam</td><td>2</td></tr>
+<tr><td></td><td>Jacqueline van den Bergh</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>Dordrecht</td><td>1</td></tr>
+<tr><td></td><td>Joyce Langenacker</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>Haarlem</td><td>1</td></tr>
+<tr><td></td><td>Judith de Jong</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>Hoorn</td><td>1</td></tr>
+<tr><td></td><td>Laurine Bonnevits-de Jong</td><td>VVD</td><td>76</td><td>Berkel en Rodenrijs</td><td>20</td></tr>
+<tr><td></td><td>Maaike Baggerman</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>Beusichem</td><td>1</td></tr>
+<tr><td></td><td>Marja Bijl</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>Rotterdam</td><td>20</td></tr>
+<tr><td></td><td>Marleen Barth</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>Wassenaar</td><td>1</td></tr>
+<tr><td></td><td>Paulien van der Hoeven</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>s-Gravenhage</td><td>1</td></tr>
+<tr><td></td><td>Petri d' Anjou- Lems</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>Zierikzee</td><td>1</td></tr>
+<tr><td></td><td>Trees Flapper</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>Drachten</td><td>1</td></tr>
+<tr><td></td><td>Trijntje Hummel</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>76</td><td>Klazienaveen</td><td>1</td></tr>
+<tr><td></td><td>Anne Koning</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>77</td><td>Delft</td><td>1</td></tr>
+<tr><td></td><td>Ehssane Gounou</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>77</td><td>Oss</td><td>1</td></tr>
+<tr><td></td><td>Farida Polsbroek</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>77</td><td>Diemen</td><td>1</td></tr>
+<tr><td></td><td>Laura Bouwmeester</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>77</td><td>Almere</td><td>1</td></tr>
+<tr><td></td><td>Nicole Teeuwen</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>77</td><td>Houten</td><td>1</td></tr>
+<tr><td></td><td>Birgit Op de Laak</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>78</td><td>Horst</td><td>1</td></tr>
+<tr><td></td><td>Crys Larson</td><td>VVD</td><td>78</td><td>Ouderkerk aan de Amstel</td><td>20</td></tr>
+<tr><td></td><td>Flora Goudappel</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>78</td><td>Rotterdam</td><td>1</td></tr>
+<tr><td></td><td>Jeltje van Nieuwenhoven</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>78</td><td>s-Gravenhage</td><td>1</td></tr>
+<tr><td></td><td>Jesse Bos</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>78</td><td>Amsterdam</td><td>20</td></tr>
+<tr><td></td><td>Laura Broekhuizen-Smit</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>78</td><td>Winschoten</td><td>1</td></tr>
+<tr><td></td><td>Marga Jonkman</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>78</td><td>Apeldoorn</td><td>1</td></tr>
+<tr><td></td><td>Marleen Damen</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>78</td><td>Leiden</td><td>1</td></tr>
+<tr><td></td><td>Paula Jorritsma</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>78</td><td>Woudrichem</td><td>1</td></tr>
+<tr><td></td><td>Wanda Ottens</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>78</td><td>Heerenveen</td><td>1</td></tr>
+<tr><td></td><td>Conny Miermans</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>79</td><td>Heinkenszand</td><td>1</td></tr>
+<tr><td></td><td>Fleur Imming</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>79</td><td>Amersfoort</td><td>1</td></tr>
+<tr><td></td><td>Josan Meijers</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>79</td><td>Tiel</td><td>1</td></tr>
+<tr><td></td><td>Kati Piri</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>79</td><td>s-Gravenhage</td><td>1</td></tr>
+<tr><td></td><td>Nelleke Vedelaar</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>79</td><td>Zwolle</td><td>1</td></tr>
+<tr><td></td><td>Hélène Oppatja</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>80</td><td>Alphen aan den Rijn</td><td>1</td></tr>
+<tr><td></td><td>Houkje Rijpstra</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>80</td><td>Gytsjerk</td><td>1</td></tr>
+<tr><td></td><td>Marjolein de Wit-Greuter</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>80</td><td>Willemstad</td><td>1</td></tr>
+<tr><td></td><td>Rita Weeda</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>80</td><td>Renkum</td><td>1</td></tr>
+<tr><td></td><td>Roos Vermeij</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>80</td><td>s-Gravenhage</td><td>1</td></tr>
+<tr><td></td><td>Saskia Szarafinski</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>80</td><td>Middelburg</td><td>1</td></tr>
+<tr><td></td><td>Tine van de Weijer</td><td>Partij van de Arbeid (P.v.d.A.)</td><td>80</td><td>Tilburg</td><td>1</td></tr>
+
+</tbody>
+    </table>	
+   
+        
+
+
+</section>
 </article>  
   
  <footer>
