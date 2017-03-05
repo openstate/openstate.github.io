@@ -2,5 +2,16 @@
 <head>
 </head>
 <body>
+<script>
+function process()
+{
+var url="https://twitter.com/search?f=tweets&q=" + document.getElementById("url").value+"+%20carredebat"+"%20list%3AOpenStateEU%2Ftk2017&src=typd";
+location.href=url;
+return false;
+}
+</script>
+<form onSubmit="return process();">
+Zoekterm: <input type="text" name="url" id="url"> <input type="submit" value="zoek">
+</form>
 </body>
 </html>
