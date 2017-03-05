@@ -2,5 +2,16 @@
 <head>
 </head>
 <body>
+<script>
+function process()
+{
+var url="https://www.politwoops.nl/search?utf8=%E2%9C%93&group=413&q=carredebat" + document.getElementById("url").value+"";
+location.href=url;
+return false;
+}
+</script>
+<form onSubmit="return process();">
+Zoekterm: <input type="text" name="url" id="url"> <input type="submit" value="zoek">
+</form>
 </body>
 </html>
