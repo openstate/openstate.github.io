@@ -89,7 +89,18 @@ Ben je op zoek naar tweets van kandidaten voor de Tweede Kamerverkiezingen? Dan 
 
 <div class="col-sm-6 col-md-5 col-lg-6">
 <strong>Zoek geplaatste berichten van politici</strong>
-<embed src="https://openstate.github.io/debatbericht/twitter" width="100%" height="200"></embed>
+<script>
+function process()
+{
+var url="https://twitter.com/search?f=tweets&q=" + document.getElementById("url").value+"+%20carredebat"+"%20list%3AOpenStateEU%2Ftk2017&src=typd";
+window.top.location.href=url;
+return false;
+}
+</script>
+<form onSubmit="return process();">
+Zoekterm: <input type="text" name="url" id="url"> <input type="submit" value="zoek">
+</form>	
+
 </div>
 
 <div class="col-sm-6 col-md-5 col-lg-6">
