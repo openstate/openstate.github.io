@@ -41,5 +41,56 @@
 </head>
 <body>
 <iframe width="100%" height="520" frameborder="0" src="https://openstate.carto.com/viz/87a4a67c-1a0d-11e7-846d-0ef24382571b/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+	
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#example').DataTable( {
+	    
+	    
+	language: {
+"sProcessing": "Bezig...",
+    "sLengthMenu": "_MENU_ resultaten weergeven",
+    "sZeroRecords": "Geen resultaten gevonden",
+    "sInfo": "_START_ tot _END_ van _TOTAL_ resultaten",
+    "sInfoEmpty": "Geen resultaten om weer te geven",
+    "sInfoFiltered": " (gefilterd uit _MAX_ resultaten)",
+    "sInfoPostFix": "",
+    "sSearch": "Zoeken:",
+    "sEmptyTable": "Geen resultaten aanwezig in de tabel",
+    "sInfoThousands": ".",
+    "sLoadingRecords": "Een moment geduld aub - bezig met laden...",
+    "oPaginate": {
+        "sFirst": "Eerste",
+        "sLast": "Laatste",
+        "sNext": "Volgende",
+        "sPrevious": "Vorige"
+    },
+    "oAria": {
+        "sSortAscending":  ": activeer om kolom oplopend te sorteren",
+        "sSortDescending": ": activeer om kolom aflopend te sorteren"
+    }
+        },
+	    
+	    
+	    
+        responsive: {
+            details: {
+                type: 'column',
+                target: 'tr'
+            }
+        },
+        columnDefs: [ {
+            className: 'control',
+            orderable: false,
+            targets:   0
+        } ],
+        order: [ 3, 'asc' ]
+    } );	 
+	
+    } );
+</script>
+
+
+	
 </body>
 </html>
