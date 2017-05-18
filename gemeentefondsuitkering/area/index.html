@@ -38,7 +38,7 @@ Highcharts.chart('container', {
     },
     yAxis: {
         title: {
-            text: 'Y-Axis'
+            text: 'x1000'
         },
         labels: {
             formatter: function () {
@@ -67,12 +67,14 @@ series: [{
         {
         name: 'Algemene Uitkering Gemeentefonds',
         data: [14776171, 15617124, 17012273, 17809026, 17879310, 18046749, 17844738, 18271271, 16860551, 17852693]
-    }, {
-        name: 'Specifieke uitkeringen',
-        data: [7025268, 6976598, 8311818, 7316745, 7340370, 7224442, 7592759, 8097376, 6128856, 6115829]
+
         }, {
         name: 'Integratie-uitkering Sociaal domein',
         data: [null, null, null, null, null, null, null, null, 10339155, 9351029]
+
+    }, {
+        name: 'Specifieke uitkeringen',
+        data: [7025268, 6976598, 8311818, 7316745, 7340370, 7224442, 7592759, 8097376, 6128856, 6115829]
     
     }]
 });
