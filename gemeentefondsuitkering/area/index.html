@@ -1,1 +1,81 @@
-ja
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<body>
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script>
+Highcharts.chart('container', {
+    chart: {
+        type: 'area',
+        spacingBottom: 30
+    },
+    title: {
+        text: ''
+    },
+    subtitle: {
+        text: '',
+        floating: true,
+        align: 'right',
+        verticalAlign: 'bottom',
+        y: 15
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        x: 150,
+        y: 100,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+    },
+    xAxis: {
+        categories: ['2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016']
+    },
+    yAxis: {
+        title: {
+            text: 'Y-Axis'
+        },
+        labels: {
+            formatter: function () {
+                return this.value;
+            }
+        }
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.series.name + '</b><br/>' +
+                this.x + ': ' + this.y;
+        }
+    },
+    plotOptions: {
+        area: {
+            fillOpacity: 0.5
+        }
+    },
+    credits: {
+        enabled: false
+    },
+series: [{
+        name: 'Totaal',
+        data: [21801439, 22593722, 25324091, 25125771, 25219680, 25271191, 25437497, 26368647, 33328562, 33319551]
+    }, 
+        {
+        name: 'Algemene Uitkering Gemeentefonds',
+        data: [14776171, 15617124, 17012273, 17809026, 17879310, 18046749, 17844738, 18271271, 16860551, 17852693]
+    }, {
+        name: 'Specifieke uitkeringen',
+        data: [7025268, 6976598, 8311818, 7316745, 7340370, 7224442, 7592759, 8097376, 6128856, 6115829]
+        }, {
+        name: 'Integratie-uitkering Sociaal domein',
+        data: [null, null, null, null, null, null, null, null, 10339155, 9351029]
+    
+    }]
+});
+  </script>
+</body>
+</html>
