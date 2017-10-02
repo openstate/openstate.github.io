@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 	<!-- ****** faviconit.com favicons ****** -->
-	<link rel="shortcut icon" href="/images/favicon.ico">
-	<link rel="icon" sizes="16x16 32x32 64x64" href="/images/favicon.ico">
+	<link rel="shortcut icon" href="static/images/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="static/images/favicon.ico">
 	<!-- ****** faviconit.com favicons ****** -->
 
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.0/css/buttons.bootstrap.min.css">
@@ -21,10 +21,11 @@
 
  <!--JS LIBRARIES-->
     <!--JQUERY-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
+
 
     <!--BOOTSTRAP JS-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -46,6 +47,13 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css">
 
 
+<!-- Tooptip -->
+<script type="text/javascript">
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
 </head>
 
 <body>
@@ -53,7 +61,7 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <header>
+   <header>
       <nav class="navbar navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
@@ -61,27 +69,33 @@
               <span class="sr-only">Toggle navigation</span>
               Menu
             </button>
-            <a id="small-brand" class="navbar-brand visible-xs-inline" href="index.html"></a>
-            <a id="large-brand" class="navbar-brand hidden-xs hidden" href="index.html"></a>
+            <a id="small-brand" class="navbar-brand visible-xs-inline" href="index.html"><img src="static/images/12195.svg"></a>
+            <a id="large-brand" class="navbar-brand hidden-xs hidden" href="index.html"><img src="static/images/12195.svg"></a>
           </div>
-          <div id="navbar" class="collapse navbar-collapse">
+             <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="https://openstate.eu">Home</a></li>
+              <li class="active"><a href="#">Home</a></li>
                 <li><a href="pages/about.html">About</a></li>
                        <li><a href="pages/data.html">Data</a></li>
               <li><a href="#contact">Contact</a></li>
+
      </ul>
-              
+</div>
+   
+   
           </div>
         </div>
       </nav>
+
+
+
+
 
       <div class="lead">
         <div class="container">
           <div class="row header">
             <div class="col-sm-3 header-logo hidden-xs">
-              <a href="https://openwob.nl">
-              
+              <a href="index.html"><i class="fa fa-chevron-circle-right fa-5x" aria-hidden="true"></i>
               </a>
               <h1 class="brand-header"><a href="#">Openmultilateral</a></h1>
             </div>
@@ -104,6 +118,8 @@
 $(document).ready(function(){
    $('#example1-tab1-dt').DataTable({
    responsive: true,
+   pageLength: 50,
+   paging: false,
   
 	order: [ 0, 'asc' ],
     
@@ -120,6 +136,8 @@ $(document).ready(function(){
 
    $('#example1-tab2-dt').DataTable({
    	 responsive: true,
+   	 pageLength: 50,
+   	 paging: false,
   
    	 order: [ 0, 'asc' ],
 
@@ -135,6 +153,8 @@ $(document).ready(function(){
    
      $('#example1-tab3-dt').DataTable({
      responsive: true,
+     pageLength: 50,
+     paging: false,
     
      order: [ 0, 'asc' ],
      
@@ -181,44 +201,157 @@ $(document).ready(function(){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><a href="data/worldbank.html" class="extern">Worldbank</a> <a href="data/worldbank.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                <tr>
+                        <td><a href="data/worldbank.html" class="extern">Worldbank</a> <a href="data/worldbank.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
-                    </tr>
-                    <tr>
-                        <td><a href="data/eib.html" class="extern">EIB</a> <a href="data/eib.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                </tr>
+                <tr>
+                        <td><a href="data/eib.html" class="extern" data-toggle="tooltip" title="European Investment Bank">EIB</a> <a href="data/eib.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
-                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
-                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
                    
-                    </tr>
-                    <tr>
-                        <td><a href="data/ifc.html" class="extern">IFC</a> <a href="data/ifc.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
-                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                </tr>
+                <tr>
+                        <td><a href="data/ifc.html" class="extern" data-toggle="tooltip" title="International Finance Corporation">IFC</a> <a href="data/ifc.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
-                    </tr>
-                    <tr>
-                    <td><a href="data/undp.html" class="extern">UNDP</a> <a href="data/undp.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
-                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
-                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
-                    </tr>
-                    <tr>
-                    <td><a href="data/unhcr.html" class="extern">UNHCR</a> <a href="data/unhcr.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                </tr>
+                <tr>
+                        <td><a href="data/undp.html" class="extern" data-toggle="tooltip" title="United Nations Development Programme">UNDP</a> <a href="data/undp.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
-                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
-                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
-					</tr>                    
-                    <tr>
-                    <td><a href="data/nato.html" class="extern">NATO</a> <a href="data/nato.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
-                    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
-                    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
-                    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
-				   </tr>
-				    
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                </tr>
+                <tr>
+                        <td><a href="data/unhcr.html" class="extern" data-toggle="tooltip" title="UN Refugee Agency">UNHCR</a> <a href="data/unhcr.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				</tr>                    
+                <tr>
+                        <td><a href="data/nato.html" class="extern" data-toggle="tooltip" title="North Atlantic Treaty Organization">NATO</a> <a href="data/nato.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				</tr>
+				<tr>
+				        <td><a href="data/ibrd.html" class="extern" data-toggle="tooltip" title="International Bank for Reconstruction and Development">IBRD</a> <a href="data/ibrd.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				</tr>
+				<tr>
+				        <td><a href="data/ida.html" class="extern" data-toggle="tooltip" title="International Development Association">IDA</a> <a href="data/ida.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				</tr>
+				<tr>
+				        <td><a href="data/miga.html" class="extern" data-toggle="tooltip" title="Multilateral Investment Guarantee Agency">MIGA</a> <a href="data/miga.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				</tr>
+
+				<tr>
+				        <td><a href="data/fao.html" class="extern" data-toggle="tooltip" title="Food and Agriculture Organization">FAO</a> <a href="data/fao.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+          <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+            </tr>
+<tr>
+		        <td><a href="data/ec.html" class="extern" data-toggle="tooltip" title="European Commission">EC</a> <a href="data/ec.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/who.html" class="extern" data-toggle="tooltip" title="World Health Organization">WHO</a> <a href="data/who.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+
+<tr>
+		        <td><a href="data/ilo.html" class="extern" data-toggle="tooltip" title="International Labour Organization">ILO</a> <a href="data/ilo.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-dot-circle-o" aria-hidden="true" style="color:orange"><span style="visibility: hidden">1</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+
+<tr>
+		        <td><a href="data/unep.html" class="extern" data-toggle="tooltip" title="United Nations Environment Programme">UNEP</a> <a href="data/unep.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+
+<tr>
+		        <td><a href="data/unicef.html" class="extern" data-toggle="tooltip" title="United Nations Children's Fund">UNICEF</a> <a href="data/unicef.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/unocha.html" class="extern" data-toggle="tooltip" title="UN Office for the Coordination of Humanitarian Affairs">UNOCHA</a> <a href="data/unocha.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/unfpa.html" class="extern" data-toggle="tooltip" title="United Nations Population Fund">UNFPA</a> <a href="data/unfpa.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/wfp.html" class="extern" data-toggle="tooltip" title="World Food Programme">WFP</a> <a href="data/wfp.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+                        <td><i class="fa fa-dot-circle-o" aria-hidden="true" style="color:orange"><span style="visibility: hidden">1</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/afdb.html" class="extern" data-toggle="tooltip" title="African Development Bank">AFDB</a> <a href="data/afdb.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/adb.html" class="extern" data-toggle="tooltip" title="Asian Development Bank">ADB</a> <a href="data/adb.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-dot-circle-o" aria-hidden="true" style="color:orange"><span style="visibility: hidden">1</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/oecd.html" class="extern" data-toggle="tooltip" title="Organisation for Economic Co-operation and Development">OECD</a> <a href="data/oecd.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/iom.html" class="extern" data-toggle="tooltip" title="International Organization for Migration">IOM</a> <a href="data/iom.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/wto.html" class="extern" data-toggle="tooltip" title="World Trade Organization">WTO</a> <a href="data/wto.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/imf.html" class="extern" data-toggle="tooltip" title="International Monetary Fund">IMF</a> <a href="data/imf.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+
+
                     
                 </tbody>
             </table>
@@ -239,42 +372,153 @@ $(document).ready(function(){
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="data/worldbank.html" class="extern">Worldbank</a> <a href="data/worldbank.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                        <td><a href="data/worldbank.html" class="extern">Worldbank</a> <a href="data/worldbank.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                     </tr>
                     <tr>
-                        <td><a href="data/eib.html" class="extern">EIB</a> <a href="data/eib.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                        <td><a href="data/eib.html" class="extern">EIB</a> <a href="data/eib.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                         <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                    
                     </tr>
                     <tr>
-                        <td><a href="data/ifc.html" class="extern">IFC</a> <a href="data/ifc.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                        <td><a href="data/ifc.html" class="extern">IFC</a> <a href="data/ifc.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                          <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                         <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                     </tr>
                     <tr>                                    
-                    <td><a href="data/undp.html" class="extern">UNDP</a> <a href="data/undp.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                    <td><a href="data/undp.html" class="extern">UNDP</a> <a href="data/undp.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                         <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
                     </tr>
 					<tr>                    
-                        <td><a href="data/unhcr.html" class="extern">UNHCR</a> <a href="data/unhcr.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                        <td><a href="data/unhcr.html" class="extern">UNHCR</a> <a href="data/unhcr.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
-                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
-                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
 					</tr>      
 					 <tr>
-                    <td><a href="data/nato.html" class="extern">NATO</a> <a href="data/nato.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
-                    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
-                    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
-                    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
+                    <td><a href="data/nato.html" class="extern">NATO</a> <a href="data/nato.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+                    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
 				   </tr>              
+				<tr>
+				        <td><a href="data/ibrd.html" class="extern">IBRD</a> <a href="data/ibrd.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				</tr>
+				<tr>
+				        <td><a href="data/ida.html" class="extern">IDA</a> <a href="data/ida.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				</tr>
+				<tr>
+				        <td><a href="data/miga.html" class="extern">MIGA</a> <a href="data/ifc.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				</tr>
+	<tr>
+				        <td><a href="data/fao.html" class="extern">FAO</a> <a href="data/fao.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				</tr>
+
+<tr>
+		        <td><a href="data/ec.html" class="extern">EC</a> <a href="data/ec.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+</tr>
+
+<tr>
+		        <td><a href="data/who.html" class="extern">WHO</a> <a href="data/who.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/ilo.html" class="extern">ILO</a> <a href="data/ilo.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-dot-circle-o" aria-hidden="true" style="color:orange"><span style="visibility: hidden">1</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/unep.html" class="extern">UNEP</a> <a href="data/unep.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/unicef.html" class="extern">UNICEF</a> <a href="data/unicef.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+<tr>
+		        <td><a href="data/unocha.html" class="extern">UNOCHA</a> <a href="data/unocha.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-dot-circle-o" aria-hidden="true" style="color:orange"><span style="visibility: hidden">1</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/unfpa.html" class="extern">UNFPA</a> <a href="data/unfpa.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/wfp.html" class="extern">WFP</a> <a href="data/wfp.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/afdb.html" class="extern">AFDB</a> <a href="data/afdb.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/adb.html" class="extern">ADB</a> <a href="data/adb.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/oecd.html" class="extern">OECD</a> <a href="data/oecd.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/iom.html" class="extern">IOM</a> <a href="data/iom.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/wto.html" class="extern">WTO</a> <a href="data/wto.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/imf.html" class="extern">IMF</a> <a href="data/imf.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-dot-circle-o" aria-hidden="true" style="color:orange"><span style="visibility: hidden">1</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+
+
 
 
                 </tbody>
@@ -298,41 +542,155 @@ $(document).ready(function(){
                 <tbody>
                 
                     <tr>
-                        <td><a href="data/worldbank.html" class="extern">Worldbank</a> <a href="data/worldbank.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                        <td><a href="data/worldbank.html" class="extern">Worldbank</a> <a href="data/worldbank.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
-                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
                     </tr>
                     <tr>
-                        	<td><a href="data/eib.html" class="extern">EIB</a> <a href="data/eib.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                        	<td><a href="data/eib.html" class="extern">EIB</a> <a href="data/eib.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                        		<td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
                             <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
-					        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
+					        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
                     </tr>
                     <tr>
-                        <td><a href="data/ifc.html" class="extern">IFC</a> <a href="data/ifc.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                        <td><a href="data/ifc.html" class="extern">IFC</a> <a href="data/ifc.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                          <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
                         <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
-                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
                     </tr>
                     <tr>                                    
-                    <td><a href="data/undp.html" class="extern">UNDP</a> <a href="data/undp.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                    <td><a href="data/undp.html" class="extern">UNDP</a> <a href="data/undp.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
-                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></td>
-                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
                     </tr>
                     <tr>                    
-                        <td><a href="data/unhcr.html" class="extern">UNHCR</a> <a href="data/unhcr.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                        <td><a href="data/unhcr.html" class="extern">UNHCR</a> <a href="data/unhcr.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
-                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></td>
-                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
 					</tr>      
 					 <tr>
-                    <td><a href="data/nato.html" class="extern">NATO</a> <a href="data/nato.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                    <td><a href="data/nato.html" class="extern">NATO</a> <a href="data/nato.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
                     <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
-                    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></td>
-                    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">1</span></i></td>
-				   </tr>              
+                    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></td>
+                    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				   </tr>  
+				   
+				   				<tr>
+				        <td><a href="data/ibrd.html" class="extern">IBRD</a> <a href="data/ibrd.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				</tr>
+				<tr>
+				        <td><a href="data/ida.html" class="extern">IDA</a> <a href="data/ida.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				</tr>
+				<tr>
+				        <td><a href="data/miga.html" class="extern">MIGA</a> <a href="data/ifc.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				</tr>
+
+		<tr>
+				        <td><a href="data/fao.html" class="extern">FAO</a> <a href="data/fao.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                </tr>
+		<tr>
+		        <td><a href="data/ec.html" class="extern">EC</a> <a href="data/ec.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/who.html" class="extern">WHO</a> <a href="data/who.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/ilo.html" class="extern">ILO</a> <a href="data/ilo.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/unep.html" class="extern">UNEP</a> <a href="data/unep.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/unicef.html" class="extern">UNICEF</a> <a href="data/unicef.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+        			    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+        			    <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/unocha.html" class="extern">UNOCHA</a> <a href="data/unocha.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/unfpa.html" class="extern">UNFPA</a> <a href="data/unfpa.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        			    <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/wfp.html" class="extern">WFP</a> <a href="data/wfp.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+                        <td><i class="fa fa-dot-circle-o" aria-hidden="true" style="color:orange"><span style="visibility: hidden">1</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/afdb.html" class="extern">AFDB</a> <a href="data/afdb.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/adb.html" class="extern">ADB</a> <a href="data/adb.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">0</span></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/oecd.html" class="extern">OECD</a> <a href="data/oecd.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-dot-circle-o" aria-hidden="true" style="color:orange"><span style="visibility: hidden">1</span></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/iom.html" class="extern">IOM</a> <a href="data/iom.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-dot-circle-o" aria-hidden="true" style="color:orange"><span style="visibility: hidden">1</span></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/wto.html" class="extern">WTO</a> <a href="data/wto.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+                        <td><i class="fa fa-check-circle-o" aria-hidden="true" style="color:green"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+                        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+<tr>
+		        <td><a href="data/imf.html" class="extern">IMF</a> <a href="data/imf.html"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+				        <td><i class="fa fa-times-circle-o" aria-hidden="true" style="color:red"><span style="visibility: hidden">2</span></i></td>
+</tr>
+
+
+			   
+				               
                 </tbody>
             </table>
         </div>
