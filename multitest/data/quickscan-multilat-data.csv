@@ -1,0 +1,25 @@
+"Abbr","Name","Budget online","Budget open data","Budget standard","Spending online","Spending open data","Spending standard","Procurement online","Procurement open data","Procurement Standard"
+"ADB","Asian Development",0,1,2,0,0,0,0,2,2
+"AFDB","African Development Bank",0,2,2,0,0,0,0,0,2
+"EC","European Commission",0,0,0,0,0,0,0,0,2
+"EIB","European Investment Bank",0,2,2,0,0,0,0,0,2
+"FAO","Food and Agriculture Organization",0,2,2,0,0,0,0,2,2
+"IBRD","International Bank for Reconstruction and Development",0,0,0,0,0,0,0,0,2
+"IDA","International Development Association",0,0,0,0,0,0,0,0,2
+"IFC","International Finance Corporation",0,0,0,0,0,0,0,0,2
+"ILO","International Labour Organization",0,1,2,0,1,0,0,2,2
+"IMF","International Monetary Fund",0,2,2,0,1,2,2,2,2
+"IOM","International Organization for Migration",0,2,2,0,2,2,1,2,2
+"MIGA","Multilateral Investment Guarantee Agency",0,0,0,0,0,2,0,0,2
+"NATO","North Atlantic Treaty Organization",2,2,2,2,2,2,0,2,2
+"OECD","Organisation for Economic Co-operation and Development",0,2,2,2,2,2,1,2,2
+"UNDP","United Nations Development Programme",0,2,2,0,0,0,0,2,2
+"UNEP","United Nations Environmental Programme",0,2,2,2,2,2,0,2,2
+"UNFPA","United Nations Population Fund",0,2,2,0,0,0,0,0,2
+"UNHCR","UN Refugee Agency",0,2,2,0,2,2,0,2,2
+"UNICEF","United Nations Children's Fund",0,2,2,0,0,0,0,2,2
+"UNOCHA","UN Office for the Coordination of Humanitarian Affairs",0,2,2,0,1,0,0,2,2
+"WB","Worldbank",0,0,0,0,0,0,0,0,2
+"WFP","World Food Programme",1,2,2,0,0,0,1,2,2
+"WHO","World Health Organization",0,2,2,0,0,0,0,2,2
+"WTO","World Trade Organization",0,2,2,2,2,2,0,2,2
