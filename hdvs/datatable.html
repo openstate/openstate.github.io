@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wapenvergunningen</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <!-- Use http://realfavicongenerator.net/ to generate favicons based on your logo -->
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.0/css/buttons.bootstrap.min.css">
+    
+    <!--JQUERY-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
+
+    <!--BOOTSTRAP JS-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+   
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/styles/main.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.0/css/buttons.bootstrap.min.css">
+
+<!-- Datatables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css">
+	
+	
+</head>
+<body>
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span10">
+
+
+  
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#example').DataTable( {
+	    
+	    
+	language: {
+"sProcessing": "Bezig...",
+    "sLengthMenu": "_MENU_ resultaten weergeven",
+    "sZeroRecords": "Geen resultaten gevonden",
+    "sInfo": "_START_ tot _END_ van _TOTAL_ resultaten",
+    "sInfoEmpty": "Geen resultaten om weer te geven",
+    "sInfoFiltered": " (gefilterd uit _MAX_ resultaten)",
+    "sInfoPostFix": "",
+    "sSearch": "Zoeken:",
+    "sEmptyTable": "Geen resultaten aanwezig in de tabel",
+    "sInfoThousands": ".",
+    "sLoadingRecords": "Een moment geduld aub - bezig met laden...",
+    "oPaginate": {
+        "sFirst": "Eerste",
+        "sLast": "Laatste",
+        "sNext": "Volgende",
+        "sPrevious": "Vorige"
+    },
+    "oAria": {
+        "sSortAscending":  ": activeer om kolom oplopend te sorteren",
+        "sSortDescending": ": activeer om kolom aflopend te sorteren"
+    }
+        },
+	    
+	    
+	    
+        responsive: {
+            details: {
+                type: 'column',
+                target: 'tr'
+            }
+        },
+        columnDefs: [ {
+            className: 'control',
+            orderable: false,
+            targets:   0
+        } ],
+        order: [ 0, 'asc' ]
+    } );	 
+	
+    } );
+</script>
+	
+<table id="example" class="display nowrap" cellspacing="0" width="100%" style="margin-left:10px">
+
+<thead>
+            <tr>
+      <th>Reikwijdte vanuit Casus</th>
+      <th>Data eigenaar</th>
+      <th>Omschrijving</th>
+      <th>URI</th>
+            </tr>
+        </thead>
+   <tfoot>
+            <tr>
+      <th>Reikwijdte vanuit Casus</th>
+      <th>Data eigenaar</th>
+      <th>Omschrijving</th>
+      <th>URI</th>
+            </tr>
+	</tfoot>
+<tbody>
+
+<tr><td>PO</td><td>DUO</td><td>03. Adressen van alle schoolvestigingen in het basisonderwijs</td><td><a href="https://duo.nl/open_onderwijsdata/images/03.-alle-vestigingen-basisonderwijs.xls" target="_blank">https://duo.nl/open_onderwijsdata/images/03.-alle-vestigingen-basisonderwijs.xls</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>06. Adressen van schoolbesturen speciaal basisonderwijs en speciaal (voortgezet) onderwijs</td><td><a href="https://duo.nl/open_onderwijsdata/images/06.-bevoegde-gezagen-speciaal-(basis)onderwijs.xls" target="_blank">https://duo.nl/open_onderwijsdata/images/06.-bevoegde-gezagen-speciaal-(basis)onderwijs.xls</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>07. Adressen van schoolbesturen primair onderwijs</td><td><a href="https://duo.nl/open_onderwijsdata/images/07.-bevoegde-gezagen-basisonderwijs-en-speciaal-(basis)onderwijs.xls" target="_blank">https://duo.nl/open_onderwijsdata/images/07.-bevoegde-gezagen-basisonderwijs-en-speciaal-(basis)onderwijs.xls</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>08. Adressen van samenwerkingsverbanden primair onderwijs</td><td><a href="https://duo.nl/open_onderwijsdata/images/08.-samenwerkingsverbanden-passend-onderwijs-po.xls" target="_blank">https://duo.nl/open_onderwijsdata/images/08.-samenwerkingsverbanden-passend-onderwijs-po.xls</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>09. Adressen van scholen per samenwerkingsverband primair onderwijs</td><td><a href="https://duo.nl/open_onderwijsdata/images/09.-instellingen-per-samenwerkingsverband-passend-onderwijs-po.xls" target="_blank">https://duo.nl/open_onderwijsdata/images/09.-instellingen-per-samenwerkingsverband-passend-onderwijs-po.xls</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>10. Adressen van besturen van samenwerkingsverbanden</td><td><a href="https://duo.nl/open_onderwijsdata/images/10.-besturen-swv-en-passend-onderwijs.xls" target="_blank">https://duo.nl/open_onderwijsdata/images/10.-besturen-swv-en-passend-onderwijs.xls</a></td></tr>
+<tr><td>WW</td><td>SZW</td><td>Beroep als voorspeller langdurig verzuim</td><td><a href="http://docs.minszw.nl/pdf/92/2009/92_2009_1_23552.pdf" target="_blank">http://docs.minszw.nl/pdf/92/2009/92_2009_1_23552.pdf</a></td></tr>
+<tr><td>WW</td><td>AMC</td><td>Beroep als risico vanwege beroepsziekten</td><td><a href="https://www.beroepsziekten.nl/content/kerncijfers-2017-vaker-burn-out-overspannen-door-werk" target="_blank">https://www.beroepsziekten.nl/content/kerncijfers-2017-vaker-burn-out-overspannen-door-werk</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>11. Stichtingen bekostigde basisscholen vanaf 1997</td><td><a href="https://duo.nl/open_onderwijsdata/images/11.-stichtingen-bekostigde-basisscholen-vanaf-1997.xls" target="_blank">https://duo.nl/open_onderwijsdata/images/11.-stichtingen-bekostigde-basisscholen-vanaf-1997.xls</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>12. Opheffingen van bekostigde basisscholen vanaf 1997</td><td><a href="https://duo.nl/open_onderwijsdata/images/12.-opheffingen-bekostigde-basisscholen-vanaf-1997.xls" target="_blank">https://duo.nl/open_onderwijsdata/images/12.-opheffingen-bekostigde-basisscholen-vanaf-1997.xls</a></td></tr>
+<tr><td>PO</td><td>CBS</td><td>CBS wijken</td><td><a href="https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/wijk-en-buurtstatistieken" target="_blank">https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/wijk-en-buurtstatistieken</a></td></tr>
+<tr><td>VO</td><td>DUO</td><td>DUO / gemeente Vroegtijdig School Verlaters VSV</td><td><a href="https://duo.nl/open_onderwijsdata/databestanden/vschoolverlaten/" target="_blank">https://duo.nl/open_onderwijsdata/databestanden/vschoolverlaten/</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>01. Leerlingen bo naar gewicht en leeftijd</td><td><a href="https://duo.nl/open_onderwijsdata/images/01.leerlingen-bo-gewicht%2C-leeftijd-2016-2017.csv" target="_blank">https://duo.nl/open_onderwijsdata/images/01.leerlingen-bo-gewicht%2C-leeftijd-2016-2017.csv</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>02. Leerlingen bo naar gewicht, samenwerkingsverband, impulsgebied en schoolgewicht</td><td><a href="https://duo.nl/open_onderwijsdata/images/02.leerlingen-bo-swv-vestiging%2C-gewicht%2C-impulsgebied%2C-schoolgewicht-2016-2017.csv" target="_blank">https://duo.nl/open_onderwijsdata/images/02.leerlingen-bo-swv-vestiging%2C-gewicht%2C-impulsgebied%2C-schoolgewicht-2016-2017.csv</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>03. Leerlingen bo en sbo naar leerjaar, geslacht, samenwerkingsverband</td><td><a href="https://duo.nl/open_onderwijsdata/images/03.-leerlingen-bo-sbo-swv-vestiging%2C-leerjaar%2C-geslacht-2016-2017.csv" target="_blank">https://duo.nl/open_onderwijsdata/images/03.-leerlingen-bo-sbo-swv-vestiging%2C-leerjaar%2C-geslacht-2016-2017.csv</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>04. Leerlingen bo en sbo naar schooladvies</td><td><a href="https://duo.nl/open_onderwijsdata/images/04.-schooladviezen-2016-2017.csv" target="_blank">https://duo.nl/open_onderwijsdata/images/04.-schooladviezen-2016-2017.csv</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>05. Gemiddelde eindscores bo en sbo</td><td><a href="https://duo.nl/open_onderwijsdata/images/05.-gemiddelde-eindtoetsscores-2016-2017.csv" target="_blank">https://duo.nl/open_onderwijsdata/images/05.-gemiddelde-eindtoetsscores-2016-2017.csv</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>06. Leerlingen bo en sbo per samenwerkingsverband vestiging en samenwerkingsverband woonachtig</td><td><a href="https://duo.nl/open_onderwijsdata/images/06.-leerlingen-bo-sbo-swv-vestiging%2C-swv-woonachtig-2016-2017.csv" target="_blank">https://duo.nl/open_onderwijsdata/images/06.-leerlingen-bo-sbo-swv-vestiging%2C-swv-woonachtig-2016-2017.csv</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>07. Prognose aantal leerlingen (bo en sbo)</td><td><a href="https://duo.nl/open_onderwijsdata/images/07.-leerlingen-bo-en-sbo-leerlingenprognoses-2012-2036.xlsx" target="_blank">https://duo.nl/open_onderwijsdata/images/07.-leerlingen-bo-en-sbo-leerlingenprognoses-2012-2036.xlsx</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>08. Groei en krimp aantal leerlingen (bo en sbo)</td><td><a href="https://duo.nl/open_onderwijsdata/images/08.-leerlingen-bo-en-sbo-groei-en-krimp-aantal-leerlingen-2012-2036.xlsx" target="_blank">https://duo.nl/open_onderwijsdata/images/08.-leerlingen-bo-en-sbo-groei-en-krimp-aantal-leerlingen-2012-2036.xlsx</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>09. Leerlingen bo zittenblijven</td><td><a href="https://duo.nl/open_onderwijsdata/images/09.-leerlingen-bo-zittenblijven-2012-2016.csv" target="_blank">https://duo.nl/open_onderwijsdata/images/09.-leerlingen-bo-zittenblijven-2012-2016.csv</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>10. Leerlingen bo naar referentieniveau taal en rekenen</td><td><a href="https://duo.nl/open_onderwijsdata/images/10.-referentieniveaus-2016-2017.csv" target="_blank">https://duo.nl/open_onderwijsdata/images/10.-referentieniveaus-2016-2017.csv</a></td></tr>
+<tr><td>W</td><td>CBS</td><td>GBA-V, indicatie VOW</td><td><a href="https://www.cbs.nl/nl-nl/maatwerk/2013/07/personen-met-indicatie-vertrokken-onbekend-waarheen--vow--" target="_blank">https://www.cbs.nl/nl-nl/maatwerk/2013/07/personen-met-indicatie-vertrokken-onbekend-waarheen--vow--</a></td></tr>
+<tr><td>W</td><td>UWV</td><td>Registratie werkzoekend, ww uitkering, werkend bij (UWV)</td><td><a href="https://www.werk.nl/werk_nl/arbeidsmarktinformatie/publicaties/thematische-publicaties/rapportage_jongeren" target="_blank">https://www.werk.nl/werk_nl/arbeidsmarktinformatie/publicaties/thematische-publicaties/rapportage_jongeren</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>11. Heroverwegingen en bijgestelde adviezen bo en sbo</td><td><a href="https://duo.nl/open_onderwijsdata/images/11.-heroverwegingen-en-bijgestelde-adviezen-2016-2017.csv" target="_blank">https://duo.nl/open_onderwijsdata/images/11.-heroverwegingen-en-bijgestelde-adviezen-2016-2017.csv</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>02. Adressen van hoofdvestigingen van scholen in het speciaal basisonderwijs en (voortgezet) speciaal onderwijs</td><td><a href="https://duo.nl/open_onderwijsdata/images/02.-hoofdvestigingen-speciaal-(basis)onderwijs.xls" target="_blank">https://duo.nl/open_onderwijsdata/images/02.-hoofdvestigingen-speciaal-(basis)onderwijs.xls</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>04. Adressen van alle schoolvestigingen in het speciaal basisonderwijs en (voortgezet) speciaal onderwijs</td><td><a href="https://duo.nl/open_onderwijsdata/images/04.-alle-vestigingen-speciaal-(basis)onderwijs.xls" target="_blank">https://duo.nl/open_onderwijsdata/images/04.-alle-vestigingen-speciaal-(basis)onderwijs.xls</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>05. Adressen van schoolbesturen basisonderwijs</td><td><a href="https://duo.nl/open_onderwijsdata/images/05.-bevoegde-gezagen-basisonderwijs.xls" target="_blank">https://duo.nl/open_onderwijsdata/images/05.-bevoegde-gezagen-basisonderwijs.xls</a></td></tr>
+<tr><td>VO</td><td>DUO</td><td>01. Leerlingen po per onderwijssoort, cluster en leeftijd</td><td><a href="https://duo.nl/open_onderwijsdata/images/01.-leerlingen-po-soort-po%2C-cluster%2C-leeftijd-2016-2017.csv" target="_blank">https://duo.nl/open_onderwijsdata/images/01.-leerlingen-po-soort-po%2C-cluster%2C-leeftijd-2016-2017.csv</a></td></tr>
+<tr><td>VO</td><td>DUO</td><td>02. Leerlingen po zoals geregistreerd in BRON</td><td><a href="https://duo.nl/open_onderwijsdata/images/02.leerlingen-so-en-vso-in-bron-2017-2018.csv" target="_blank">https://duo.nl/open_onderwijsdata/images/02.leerlingen-so-en-vso-in-bron-2017-2018.csv</a></td></tr>
+<tr><td>VO</td><td>DUO</td><td>03. Leerlingen po per gemeente, postcode leerling en leeftijd</td><td><a href="https://duo.nl/open_onderwijsdata/images/03.-leerlingen-po-per-gemeente-postcode-leerling%2C-leeftijd-2016-2017.zip" target="_blank">https://duo.nl/open_onderwijsdata/images/03.-leerlingen-po-per-gemeente-postcode-leerling%2C-leeftijd-2016-2017.zip</a></td></tr>
+<tr><td>VO</td><td>DUO</td><td>04. Leerlingen po schoolgaand binnen en buiten de gemeente</td><td><a href="https://duo.nl/open_onderwijsdata/images/04.-leerlingen-po-per-gemeente-schoolgaand-in-en-buiten-de-gemeente-2016-2017.csv" target="_blank">https://duo.nl/open_onderwijsdata/images/04.-leerlingen-po-per-gemeente-schoolgaand-in-en-buiten-de-gemeente-2016-2017.csv</a></td></tr>
+<tr><td>VO</td><td>DUO</td><td>05. Gemiddelde afstand in meters tussen woonadres leerling en postcode van de schoolvestiging</td><td><a href="https://duo.nl/open_onderwijsdata/images/05.-gemiddelde-afstand-tussen-woonadres-leerling-en-schoolvestiging-2016-2017.csv" target="_blank">https://duo.nl/open_onderwijsdata/images/05.-gemiddelde-afstand-tussen-woonadres-leerling-en-schoolvestiging-2016-2017.csv</a></td></tr>
+<tr><td>PO</td><td>BZK</td><td>Gezinssituatie jonge kinderen (echtscheiding; leeftijdsverschil, kinderen, geboorteland, huwelijksduur)</td><td><a href="http://statline.cbs.nl/StatWeb/publication/?DM=SLNL&PA=60060ned" target="_blank">http://statline.cbs.nl/StatWeb/publication/?DM=SLNL&PA=60060ned</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>01. Onderwijspersoneel in het primair onderwijs in aantal personen</td><td><a href="https://duo.nl/open_onderwijsdata/images/01.-onderwijspersoneel-po-in-personen.xlsx" target="_blank">https://duo.nl/open_onderwijsdata/images/01.-onderwijspersoneel-po-in-personen.xlsx</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>02. Onderwijspersoneel in het primair onderwijs in aantal fte</td><td><a href="https://duo.nl/open_onderwijsdata/images/02.-onderwijspersoneel-po-in-fte.xlsx" target="_blank">https://duo.nl/open_onderwijsdata/images/02.-onderwijspersoneel-po-in-fte.xlsx</a></td></tr>
+<tr><td>VO</td><td>DUO</td><td>Financien al het bevoegde gezag</td><td><a href="https://www.duo.nl/open_onderwijsdata/publicaties/financien/" target="_blank">https://www.duo.nl/open_onderwijsdata/publicaties/financien/</a></td></tr>
+<tr><td>VO</td><td>DUO</td><td>Personeel voortgezet onderwijs</td><td><a href="https://www.duo.nl/open_onderwijsdata/databestanden/vo/onderwijspersoneel/" target="_blank">https://www.duo.nl/open_onderwijsdata/databestanden/vo/onderwijspersoneel/</a></td></tr>
+<tr><td>VO</td><td>DUO</td><td>Personeel in het mbo</td><td><a href="https://www.duo.nl/open_onderwijsdata/databestanden/mbo/onderwijspersoneel/" target="_blank">https://www.duo.nl/open_onderwijsdata/databestanden/mbo/onderwijspersoneel/</a></td></tr>
+<tr><td>VO</td><td>DUO</td><td>Mbo Indicatoren</td><td><a href="https://www.duo.nl/open_onderwijsdata/databestanden/mbo/indicatoren-mbo/" target="_blank">https://www.duo.nl/open_onderwijsdata/databestanden/mbo/indicatoren-mbo/</a></td></tr>
+<tr><td>VO</td><td>DUO</td><td>https://www.duo.nl/open_onderwijsdata/databestanden/passendow/</td><td><a href="https://www.duo.nl/open_onderwijsdata/databestanden/passendow/" target="_blank">https://www.duo.nl/open_onderwijsdata/databestanden/passendow/</a></td></tr>
+<tr><td>HBO</td><td>Ver. Ho</td><td>HBO indicatoren op basis van data uit 2015</td><td><a href="http://www.vereniginghogescholen.nl/kennisbank/feiten-en-cijfers" target="_blank">http://www.vereniginghogescholen.nl/kennisbank/feiten-en-cijfers</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>Kinderopvang locaties</td><td><a href="https://data.overheid.nl/data/dataset/gegevens-kinderopvanglocaties-lrk" target="_blank">https://data.overheid.nl/data/dataset/gegevens-kinderopvanglocaties-lrk</a></td></tr>
+<tr><td>VO</td><td>Verening  Universiteiten</td><td>Wetenschappelijk onderwijs indicatoren</td><td><a href="http://www.vsnu.nl/nl_NL/doorstuderen-en-uitval.html" target="_blank">http://www.vsnu.nl/nl_NL/doorstuderen-en-uitval.html</a></td></tr>
+<tr><td>PO</td><td>UWV</td><td>Aanbod arbeidsmarkt (vraag dus)</td><td><a href="https://www.werk.nl/werk_nl/werknemer/vacatures?" target="_blank">https://www.werk.nl/werk_nl/werknemer/vacatures?</a></td></tr>
+<tr><td>VO</td><td>OCW</td><td>DUO studiekeuze</td><td><a href="https://www.studiekeuze123.nl/selectie" target="_blank">https://www.studiekeuze123.nl/selectie</a></td></tr>
+<tr><td>VO</td><td>MBO Raad</td><td>Bron afgeleid</td><td><a href="https://www.mboraad.nl/het-mbo/feiten-en-cijfers" target="_blank">https://www.mboraad.nl/het-mbo/feiten-en-cijfers</a></td></tr>
+<tr><td>W</td><td>SBE</td><td>arbeidsmarkt cijfers ROA maastricht</td><td><a href="http://roa.sbe.maastrichtuniversity.nl/?page_id=3727" target="_blank">http://roa.sbe.maastrichtuniversity.nl/?page_id=3727</a></td></tr>
+<tr><td>W</td><td>SBE</td><td>arbeidsmarkt cijfers ROA maastricht</td><td><a href="http://roastatistics.maastrichtuniversity.nl/" target="_blank">http://roastatistics.maastrichtuniversity.nl/</a></td></tr>
+<tr><td>W</td><td>SBE</td><td>arbeidsmarkt cijfers ROA maastricht in DANS EASY (detaildata)</td><td><a href="https://easy.dans.knaw.nl/ui/datasets/id/easy-dataset:65127" target="_blank">https://easy.dans.knaw.nl/ui/datasets/id/easy-dataset:65127</a></td></tr>
+<tr><td>PO</td><td>DUO</td><td>verblijfsjaren - vmbo, havo, vwo, praktijkonderwijs instelling</td><td><a href="https://duo.nl/open_onderwijsdata/databestanden/vo/leerlingen/leerlingen-vo-1.jsp" target="_blank">https://duo.nl/open_onderwijsdata/databestanden/vo/leerlingen/leerlingen-vo-1.jsp</a></td></tr>
+<tr><td>W</td><td>DUO</td><td>beroeps opleidingen per instelling</td><td><a href="https://duo.nl/open_onderwijsdata/databestanden/mbo/crebo/" target="_blank">https://duo.nl/open_onderwijsdata/databestanden/mbo/crebo/</a></td></tr>
+<tr><td>W</td><td>DUO</td><td>Combinatie beroepsopleiding en beroep</td><td><a href="https://duo.nl/open_onderwijsdata/databestanden/mbo/crebo/crebo-2.jsp" target="_blank">https://duo.nl/open_onderwijsdata/databestanden/mbo/crebo/crebo-2.jsp</a></td></tr>
+
+
+</tbody>
+</table>	
+	
+</body>
+</html>
