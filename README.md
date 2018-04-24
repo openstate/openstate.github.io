@@ -1,5 +1,5 @@
 # Open State Foundation GitHub Pages
-A wide variety of visualisations, analyses and documents made by the [Open State Foundation](https://openstate.eu/nl/):
+A wide variety of visualisations, analyses and documents published by the [Open State Foundation](https://openstate.eu/nl/):
 - [Buurtstratenquotes Amsterdam](https://openstate.github.io/bsq020/)
 - [Open Stemwijzer](https://openstate.github.io/digitrans/)
 - [Uitkeringen Gemeentefonds](https://openstate.github.io/gemeentefondsuitkering/)
