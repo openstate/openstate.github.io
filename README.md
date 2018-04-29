@@ -6,7 +6,6 @@ A wide variety of visualisations, analyses and documents published by the [Open 
 - [GR2018 kandidaten op meerdere lijsten](https://openstate.github.io/gr2018-dubbel/)
 - [Hack de Valse Start datavisualisatie](https://openstate.github.io/hackdevalsestart/)
 - [Verpleegkundigen](https://openstate.github.io/hahb/)
-- [Hack de Valse Start probeersel](https://openstate.github.io/hdvs/datatable.html)
 - [Herkomst kandidaten TK2017](https://openstate.github.io/herkomstkandidatenTK2017/) part of [https://openstate.eu/nl/projecten/datajournalisme/verkiezingen2017/](https://openstate.eu/nl/projecten/datajournalisme/verkiezingen2017/)
 - [Gegevensbestanden en koppelingen bij de overheid (2015)](https://openstate.github.io/koppelingen/rijksoverheid/) part of [https://openstate.eu/nl/projecten/datajournalisme/gegevensbestanden-en-koppelingen-bij-de-overheid/](https://openstate.eu/nl/projecten/datajournalisme/gegevensbestanden-en-koppelingen-bij-de-overheid/)
 - [Quickscan Open Multilaterals](https://openstate.github.io/multitest/) part of [https://openstate.eu/nl/2017/11/multilaterale-organisaties-onvoldoende-transparant/](https://openstate.eu/nl/2017/11/multilaterale-organisaties-onvoldoende-transparant/)
